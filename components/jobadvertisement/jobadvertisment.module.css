@@ -1,0 +1,57 @@
+.contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px);
+    padding: 32px 35px;
+    margin-bottom: 70px;
+}
+
+.avatar {
+    width: 165px;
+    height: 165px;
+}
+
+.titleAndContentWrapper {
+    width: 700px;
+}
+
+.title {
+    color: #002B43;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.content {
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.joinUs {
+    width: 226px;
+    height: 56px;
+    border: 1px solid #00A5C7;
+    cursor: pointer;
+    background-color: white;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+.showMoreDiv{
+    text-align: right;
+    cursor: pointer;
+}
+
+.showMoreDiv:hover .showMore{
+    text-decoration: underline;
+}
