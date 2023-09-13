@@ -1,0 +1,45 @@
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 365px;
+}
+
+.title {
+    color: #002B43;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.hr {
+    width: 77px;
+    height: 4px;
+    flex-shrink: 0;
+    border: none;
+    background: #00C4E0;
+    transition: width .5s ease;
+}
+
+.hr:hover {
+    width: 100%
+}
+
+.titleWrapper {
+    margin-bottom: 21px;
+}
+
+.ourTeamContentWrapper {
+    margin-bottom: 115px;
+}
+
+.ourTeamContent {
+    color: #8E8E8E;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

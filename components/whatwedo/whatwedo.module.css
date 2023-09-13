@@ -1,0 +1,56 @@
+.contentWrapper {
+    height: 670px;
+    /*TODO:*/
+    border: 1px solid red;
+    margin-bottom: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleDiv {
+    border: 1px solid blue;
+    margin-bottom: 85px;
+}
+
+.title {
+    color: #002B43;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.hr {
+    width: 95px;
+    height: 5px;
+    border: none;
+    border-radius: 2px;
+    background: #00A5C7;
+    border: none;
+    transition: width .5s ease;
+}
+
+.hr:hover {
+    width: 100%
+}
+
+.whatWeDoStepsWrapper {
+    display: flex;
+}
+
+.circle {
+    width: 333px;
+    height: 333px;
+    /* width = 2* height */
+    border: 5px dashed deepskyblue;
+    /* border-radius = height + border */
+    border-radius: 0 0 333px 333px;
+    border-top: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoWrapper {}

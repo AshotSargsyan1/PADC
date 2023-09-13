@@ -1,0 +1,150 @@
+.contentWrapper {
+    height: 620px;
+    margin-bottom: 210px;
+}
+
+.title {
+    color: #002B43;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 33px;
+}
+
+.hr {
+    width: 77px;
+    height: 8px;
+    margin-bottom: 110px;
+    background: #002B43;
+    transition: width .5s ease;
+}
+
+.hr:hover {
+    width: 218px
+}
+
+.contactAndMapWrapper {
+    width: 100%;
+    display: flex;
+}
+
+.contactAndMapSubWrapper {
+    width: 50%;
+}
+
+.contactWrapper {
+    display: flex;
+    margin-bottom: 75px;
+}
+
+.contactInfoFields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 45px;
+}
+
+.contactInfoDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfoFields strong:last-child {
+    margin-bottom: 0;
+}
+
+.contactInfoField {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 55px;
+}
+
+.contactInfoDiv a:last-child {
+    margin-bottom: 0;
+}
+
+.contactInfoDiv a:nth-child(2) {
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.contactInfo {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 55px;
+}
+
+.enterNumberDiv {
+    margin-bottom: 15px;
+}
+
+.titleForNumber {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.subTextForNumber {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.inputForNumber {
+    width: 390px;
+    height: 61px;
+    border-radius: 10px;
+    border: 2px solid #B9B9B9;
+    margin-right: 22px;
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+.buttonForSendNumber {
+    border: none;
+    width: 171px;
+    height: 61px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #00A5C7;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 100%;
+}
+
+.gmap_iframe {
+    width: 100% !important;
+    height: 100% !important;
+}

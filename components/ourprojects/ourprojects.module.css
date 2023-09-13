@@ -1,0 +1,53 @@
+.contentWrapper {
+    display: flex;
+    margin-bottom: 466px;
+}
+
+.title {
+    color: #002B43;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+
+.hr {
+    width: 77px;
+    height: 4px;
+    border: none;
+    background: #00C4E0;
+    margin-bottom: 40px;
+    transition: width .5s ease;
+}
+
+.hr:hover {
+    width: 225px
+}
+
+/* 
+.triangles {
+    position: absolute;
+    right: 0;
+    width: 2000px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    z-index: 0;
+}
+
+.triangle1 {
+    transition: all .3s linear !important;
+    transform: translate(-13.4625px, -6.7375px);
+}
+
+.triangle2 {
+    transition: all .3s linear !important;
+}
+
+.triangle3 {
+    margin-top: 82px;
+    margin-bottom: 60px;
+} */

@@ -1,0 +1,223 @@
+.sliderWrapper {
+    position: relative
+}
+
+.sliderWrapper2 {
+    position: relative
+}
+
+.mainDiv {
+    height: 510px;
+}
+
+.slideItem {
+    display: flex;
+}
+
+.slideContent {
+    height: 510px;
+    width: 55%;
+}
+
+.slideContent2 {
+    height: 100%;
+}
+
+.slideImgDiv {
+    height: 510px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.subTitle {
+    color: rgba(0, 0, 0, 0.51);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 57px;
+    margin-bottom: 35px;
+}
+
+.title {
+    color: #000;
+    font-size: 60px;
+    max-width: 760px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.content {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 105px;
+}
+
+.content2 {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.contentDiv {
+    width: 660px;
+    height: 195px;
+    margin-bottom: 16px;
+}
+
+.btnsForSlide {
+    position: absolute;
+    z-index: 2;
+    bottom: -20px;
+    display: flex;
+    align-items: center
+}
+
+.btnsForSlide2 {
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    display: flex;
+    align-items: center
+}
+
+.elipse {
+    margin: 25px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 196, 224, 1);
+}
+
+.indicatorBtn {
+    cursor: pointer
+}
+
+.title2 {
+    color: #00C4E0;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.hr {
+    width: 77px;
+    height: 4px;
+    border: 0;
+    background: #00C4E0;
+    margin-bottom: 40px;
+}
+
+.secondTitle {
+    color: #00C4E0;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.viewMoreBtn {
+    border: 3px solid #00C4E0;
+    background-color: white;
+    width: 195px;
+    height: 45px;
+    color: #00C4E0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 33px;
+    margin-bottom: 130px;
+}
+
+.ourTeamInfo {
+    width: 100%;
+}
+
+.cardWrapper:hover * .darkDivOnCard{
+    opacity: 0;
+}
+
+.cardInfo {
+    position: relative;
+    width: 425px;
+    height: 425px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 1%;
+}
+
+.darkDivOnCard {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: .4;
+    z-index: 10;
+}
+
+.cardImg {
+    width: calc(100% + 50px);
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 -50px;
+    transform: translate3d(-40px, 0, 0);
+}
+
+.nameAndSurename {
+    color: white;
+    position: absolute;
+    z-index: 1000;
+    left: 10px;
+    bottom: 90px;
+    font-weight: 500;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    letter-spacing: -.2px;
+}
+
+
+.profession{
+    position: absolute;
+    left: 10px;
+    bottom: -100%;
+    width: 95%;
+    text-align: left;
+    z-index: 1000;
+    background-color: lightgray;
+    opacity: .7;
+    padding: 2px;
+    font-weight: 600;
+}
+
+.professionP{
+    color: black;
+    font-size: 14px;
+    letter-spacing: 2px;
+    
+}
+
+.darkDivOnCard, .profession{
+    transition: all 0.4s;
+}
+
+
+.cardWrapper:hover * .profession{
+    bottom: 60px;
+}
+
