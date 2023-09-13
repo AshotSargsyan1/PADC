@@ -14,11 +14,17 @@ export default function OurProjects() {
                 <hr className={styles.hr} />
                 <Carousel2 />
             </div>
-            {/* <div className={styles.triangles}>
-                <Image src={Triangle1} className={styles.triangle1} width={350} height={300} alt="triangle 1" />
-                <Image src={Triangle3} className={styles.triangle2} width={350} height={300} alt="triangle 2" />
-                <Image src={Triangle2} className={styles.triangle3} width={350} height={300} alt="triangle 3" />
-            </div> */}
+            <div className={styles.triangles}>
+                <div className={styles.triangleWrapper}>
+                    <Image src={Triangle1} className={styles.triangle1} width={350} height={300} alt="triangle 1" />
+                </div>
+                <div className={styles.triangleWrapper}>
+                    <Image src={Triangle3} className={styles.triangle2} width={350} height={300} alt="triangle 2" />
+                </div>
+                <div className={styles.triangleWrapper}>
+                    <Image src={Triangle2} className={styles.triangle3} width={350} height={300} alt="triangle 3" />
+                </div>
+            </div>
         </div>
     )
 }

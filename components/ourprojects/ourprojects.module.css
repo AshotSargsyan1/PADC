@@ -1,4 +1,5 @@
 .contentWrapper {
+    position: relative;
     display: flex;
     margin-bottom: 466px;
 }
@@ -11,7 +12,6 @@
     line-height: normal;
     margin-bottom: 16px;
 }
-
 
 .hr {
     width: 77px;
@@ -26,18 +26,23 @@
     width: 225px
 }
 
-/* 
+
 .triangles {
     position: absolute;
     right: 0;
-    width: 2000px;
-    height: 600px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     z-index: 0;
 }
 
+.triangleWrapper {
+    border: 1px solid;
+    height: 300px;
+    width: 350px;
+}
+
+/* 
 .triangle1 {
     transition: all .3s linear !important;
     transform: translate(-13.4625px, -6.7375px);

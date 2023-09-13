@@ -1,6 +1,40 @@
 .headerCarouselDiv {
     margin-bottom: 122px;
 }
+
+.titleAndContentWrapper {
+    text-align: center;
+    margin-bottom: 220px;
+}
+
+.title {
+    margin-bottom: 100px;
+    color: #000;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.selectedWordInTitle {
+    color: #00A5C7;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #00A5C7;
+}
+
+.content {
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 55px;
+}
+
 /* 
 .padcLlcYear {
     margin-bottom: 120px;

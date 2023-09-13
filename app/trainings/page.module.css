@@ -1,0 +1,13 @@
+.announcementsWrapper{
+    margin-bottom: 115px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.announcement{
+    background: rgba(0, 0, 0, 0.90);
+    width: 400px;
+    height: 260px;
+    margin-bottom: 80px;
+}
