@@ -1,6 +1,3 @@
-import Image from 'next/image'
-
-import googleFakeMap from '../../assets/map.png'
 import styles from './contact.module.css'
 
 export function Contact() {

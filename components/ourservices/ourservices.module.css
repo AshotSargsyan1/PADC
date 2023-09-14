@@ -29,28 +29,8 @@
     width: 100%
 }
 
-.titleForServices {
-    font-size: 50px;
-    line-height: 59px;
-    color: white;
-}
-
-.subTitlesForServices {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    color: white;
-}
-
 .serviceMainContent:last-child>div {
     margin-bottom: 20px;
-}
-
-.servicesNames {
-    font-weight: 400;
-    font-size: 16px Line;
-    height: 19.5px;
-    padding: 0;
 }
 
 .ourServicesWrapper {

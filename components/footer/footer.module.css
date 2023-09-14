@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     height: 100%;
 }
 
@@ -44,7 +44,7 @@
     stroke-width: 1px;
     stroke: #1A2B39;
     border-radius: 50%;
-    padding: 5px;
+    padding: 9px 5px 5px;
     cursor: pointer;
 }
 
@@ -64,7 +64,7 @@
     min-height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     margin-right: 200px;
 }
 

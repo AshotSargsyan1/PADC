@@ -4,8 +4,7 @@ import Link from 'next/link'
 import padcLogo from '../../assets/padc_logo.svg'
 import styles from './header.module.css'
 
-export default async function Header() {
-
+export default function Header() {
     return (
         <header className={styles.header}>
             <div className={`${styles.subHeader} container`}>

@@ -1,5 +1,4 @@
 import Header from "@/components/header/header";
-import Slider from "@/components/carousel/carousel";
 
 import { WhatWeDo } from "@/components/whatwedo/whatwedo";
 import { OurServices } from "@/components/ourservices/ourservices";

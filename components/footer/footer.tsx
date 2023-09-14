@@ -14,26 +14,38 @@ export function Footer() {
         <footer className={`${styles.footer} container`}>
             <div className={`${styles.logoAndLinksWrapper} container`}>
                 <div className={styles.logoDiv}>
-                        <div className={styles.padcLogoDiv}>
+                    <div className={styles.padcLogoDiv}>
+                        <Link href='/'>
                             <Image src={padcLogo} height={90} width={270} alt='padc footer logo' />
+                        </Link>
+                    </div>
+                    <div className={styles.logosWrapper}>
+                        <div className={styles.logoWrapper}>
+                            <Link href='https://www.facebook.com/padc.ltd/'>
+                                <Image src={facebook} alt='facebook' />
+                            </Link>
                         </div>
-                        <div className={styles.logosWrapper}>
-                            <div className={styles.logoWrapper}>
-                                <Image src={facebook} alt='facebook'/>
-                            </div>
-                            <div className={styles.logoWrapper}>
+                        <div className={styles.logoWrapper}>
+                            <Link href='#'>
                                 <Image src={instagram} alt='instagram' />
-                            </div>
-                            <div className={styles.logoWrapper}>
-                                <Image src={twitter} alt='twitter' />
-                            </div>
-                            <div className={styles.logoWrapper}>
-                                <Image src={linkedin} alt='linkedin' />
-                            </div>
-                            <div className={styles.logoWrapper}>
-                                <Image src={google} alt='google' />
-                            </div>
+                            </Link>
                         </div>
+                        <div className={styles.logoWrapper}>
+                            <Link href='#'>
+                                <Image src={twitter} alt='twitter' />
+                            </Link>
+                        </div>
+                        <div className={styles.logoWrapper}>
+                            <Link href='https://www.linkedin.com/company/padc-llc/'>
+                                <Image src={linkedin} alt='linkedin' />
+                            </Link>
+                        </div>
+                        <div className={styles.logoWrapper}>
+                            <Link href='#'>
+                                <Image src={google} alt='google' />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.navigationDiv}>
                     <div className={styles.navigateLines}>

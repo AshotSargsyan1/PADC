@@ -21,11 +21,20 @@
     margin-left: 52px;
 }
 
-.nav:hover>* {
-    padding: 7px;
-    color: white;
+.nav,
+.navText {
+    transition: all .4s ease;
+}
+
+.nav:hover {
+    padding: 7px 5px;
     background-color: rgba(0, 168, 201, 0.88);
     cursor: pointer;
+    box-shadow: 0px 4px 14px 1px rgba(26, 43, 57, 0.28);
+}
+
+.nav:hover>.navText {
+    color: white;
 }
 
 .logoAndNavigateWrapper {

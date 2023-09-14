@@ -10,10 +10,6 @@
     height: 510px;
 }
 
-.slideItem {
-    display: flex;
-}
-
 .slideContent {
     height: 510px;
     width: 55%;
@@ -75,34 +71,6 @@
     margin-bottom: 16px;
 }
 
-.btnsForSlide {
-    position: absolute;
-    z-index: 2;
-    bottom: -20px;
-    display: flex;
-    align-items: center
-}
-
-.btnsForSlide2 {
-    position: absolute;
-    z-index: 2;
-    bottom: 0px;
-    display: flex;
-    align-items: center
-}
-
-.elipse {
-    margin: 25px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 196, 224, 1);
-}
-
-.indicatorBtn {
-    cursor: pointer
-}
-
 .title2 {
     color: #00C4E0;
     font-size: 38px;
@@ -112,42 +80,8 @@
     margin-bottom: 25px;
 }
 
-.hr {
-    width: 77px;
-    height: 4px;
-    border: 0;
-    background: #00C4E0;
-    margin-bottom: 40px;
-}
-
-.secondTitle {
-    color: #00C4E0;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 25px;
-}
-
-.viewMoreBtn {
-    border: 3px solid #00C4E0;
-    background-color: white;
-    width: 195px;
-    height: 45px;
-    color: #00C4E0;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 33px;
-    margin-bottom: 130px;
-}
-
 .ourTeamInfo {
     width: 100%;
-}
-
-.cardWrapper:hover * .darkDivOnCard{
-    opacity: 0;
 }
 
 .cardInfo {
@@ -191,8 +125,7 @@
     letter-spacing: -.2px;
 }
 
-
-.profession{
+.profession {
     position: absolute;
     left: 10px;
     bottom: -100%;
@@ -205,19 +138,27 @@
     font-weight: 600;
 }
 
-.professionP{
+.professionP {
     color: black;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 2px;
-    
+
 }
 
-.darkDivOnCard, .profession{
-    transition: all 0.4s;
+.darkDivOnCard,
+.profession,
+.cardImg {
+    transition: all .5s ease;
 }
 
-
-.cardWrapper:hover * .profession{
+.cardWrapper:hover * .profession {
     bottom: 60px;
 }
 
+.cardWrapper:hover * .darkDivOnCard {
+    opacity: 0;
+}
+
+.cardWrapper:hover * .cardImg {
+    transform: translate3d(0, 0, 0);
+}

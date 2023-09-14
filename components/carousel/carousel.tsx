@@ -1,14 +1,12 @@
 'use client'
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Slider from 'react-slick';
 
 import padclogo from '../../assets/padc_logo.svg'
-import fakeAvatarImage from '../../assets/alen.png'
-import prevIcon from '../../assets/prevIcon.svg'
-import nextIcon from '../../assets/nextIcon.svg'
 import slideImage from '../../assets/slideimg.png'
 import styles from './carousel.module.css'
+import { ISliderSettings } from '@/models/interfaces/carousel';
 
 export default function Carousel() {
 
@@ -39,7 +37,7 @@ export default function Carousel() {
         }
     ])
 
-    const settings = {
+    const settings: ISliderSettings = {
         dots: true,
         infinite: dataForSlide.length > 3,
         speed: 500,
@@ -79,46 +77,28 @@ export default function Carousel() {
 
 
 
+export const Carousel2 = ({ projectsData }: any) => {
 
-
-export const Carousel2 = () => {
-
-    const [dataForSlide] = useState([
-        {
-            title: 'WASHBOT',
-            content: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text.'
-        },
-        {
-            title: '123',
-            content: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text.'
-        },
-        {
-            title: '222 ',
-            content: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text.'
-        }
-    ])
-
-    const settings = {
+    const settings: ISliderSettings = {
         dots: true,
-        infinite: dataForSlide.length > 3,
+        infinite: projectsData.data.length > 3,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false
     };
-    
+
     return (
         <div className={`${styles.sliderWrapper2} container`}>
             <Slider className={styles.slider} {...settings}>
-                {dataForSlide.map(data => {
+                {!!projectsData.data.length && projectsData.data.map((data: any) => {
                     return (
-                        <div>
+                        <div key={data.id}>
                             <div className={styles.slideContent2}>
                                 <h2 className={styles.title2}>{data.title}</h2>
                                 <div className={styles.contentDiv}>
-                                    <p className={styles.content2}>{data.content}</p>
+                                    <p className={styles.content2}>{data.description}</p>
                                 </div>
-                                <button className={styles.viewMoreBtn}>VIEW MORE</button>
                             </div>
                         </div>
                     )
@@ -128,57 +108,34 @@ export const Carousel2 = () => {
     );
 }
 
-export const Carousel3 = () => {
+export const Carousel3 = (team: any) => {
 
-    const employeers = [
-        {
-            nameAndSurename: 'SATEN GEVORGYAN',
-            profession: 'QUALITY ASSURANCE ENGINNER'
-        },
-        {
-            nameAndSurename: 'ZHANNA POGHOSSIAN',
-            profession: 'FRONT-END ENGINNER'
-        },
-        {
-            nameAndSurename: 'ROBERT GRKIKYAN',
-            profession: 'REACT-NATIVE DEVELOPER'
-        },
-        {
-            nameAndSurename: 'SATEN GEVORGYAN',
-            profession: 'QUALITY ASSURANCE ENGINNER'
-        },
-        {
-            nameAndSurename: 'ZHANNA POGHOSSIAN',
-            profession: 'FRONT-END ENGINNER'
-        },
-        {
-            nameAndSurename: 'ROBERT GRKIKYAN',
-            profession: 'REACT-NATIVE DEVELOPER'
-        }
-    ]
-
-    const settings = {
+    const settings: ISliderSettings = {
         dots: true,
-        infinite: employeers.length > 3,
+        infinite: team.team.length > 3,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         arrows: false
     };
+
+    function imageSrc(path: string): string {
+        return `${process.env.DB_APP_BASE_URL}assets/images/team/${path}`
+    }
 
     return (
         <div className={styles.ourTeamInfo}>
             <Slider {...settings}>
-                {employeers.map(emp => {
+                {!!team.team.length && team.team.map((employee: any) => {
                     return (
                         <div className={styles.cardWrapper}>
                             <figure className={styles.cardInfo}>
                                 <div className={styles.darkDivOnCard}></div>
-                                <Image src={fakeAvatarImage} alt='card image' className={styles.cardImg} />
+                                <Image loader={() => imageSrc(employee.image)} src={imageSrc(employee.image)} width={500} height={570} alt='card image' className={styles.cardImg} />
                                 <figcaption>
-                                    <h3 className={styles.nameAndSurename}>{emp.nameAndSurename}</h3>
+                                    <h3 className={styles.nameAndSurename}>{employee.name}</h3>
                                     <div className={styles.profession}>
-                                        <p className={styles.professionP}>{emp.profession}</p>
+                                        <p className={styles.professionP}>{employee.description}</p>
                                     </div>
                                 </figcaption>
                             </figure>

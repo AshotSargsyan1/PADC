@@ -1,7 +1,8 @@
-import { Footer } from '@/components/footer/footer'
-import './globals.css'
-import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
+import type { Metadata } from 'next'
+import './globals.css'
+
+import { Footer } from '@/components/footer/footer'
 
 const inter = Montserrat({ subsets: ['latin'] })
 

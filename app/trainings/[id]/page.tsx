@@ -1,10 +1,25 @@
-import React from 'react'
+import { FC } from "react"
 
-type Props = {}
+import Header from "@/components/header/header"
+import { HeaderContent } from "@/components/headercontent/headercontent"
+import { Request2 } from "@/components/request/request"
+import { Contact } from "@/components/contact/contact"
 
-const page = (props: Props) => {
+interface pageProps {
+    params: {
+        id: string
+    }
+}
+
+const page: FC<pageProps> = ({ params }) => {
+
     return (
-        <div>page</div>
+        <>
+            <Header />
+            <HeaderContent forAllTrainings={true} />
+            <Request2 />
+            <Contact />
+        </>
     )
 }
 
