@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 import { Footer } from '@/components/footer/footer'
+import Head from 'next/head'
 
 const inter = Montserrat({ subsets: ['latin'] })
 
@@ -18,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="stylesheet" href="./globals.css" />
+      </Head>
       <body className={inter.className}>
         <div className="app_wrapper">
           {children}
