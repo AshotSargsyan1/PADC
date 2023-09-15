@@ -2,7 +2,7 @@ import styles from './ourservices.module.css'
 
 export function OurServices() {
     return (
-        <div className={`${styles.contentWrapper} container`}>
+        <div className={`${styles.contentWrapper} container`} id='services'>
             <div>
                 <h2 className={styles.title}>OUR SERVICES</h2>
                 <hr className={styles.hr} />

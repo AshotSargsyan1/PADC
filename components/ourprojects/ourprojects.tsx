@@ -8,7 +8,7 @@ import styles from './ourprojects.module.css'
 
 
 export function getProjects() {
-    return fetch('https://api.padcllc.com/projects').then(res => res.json())
+    return fetch('https://api.padcllc.com/projects', { next: { revalidate: 150 } }).then(res => res.json())
 }
 
 export default async function OurProjects() {
@@ -16,11 +16,11 @@ export default async function OurProjects() {
     const projects = await getProjects()
 
     return (
-        <div className={`${styles.contentWrapper} container`}>
+        <div className={`${styles.contentWrapper} container`} id='projects'>
             <div>
                 <h3 className={styles.title}>OUR PROJECTS</h3>
                 <hr className={styles.hr} />
-                <Carousel2 projectsData={projects}/>
+                <Carousel2 projectsData={projects} />
             </div>
             {/* <div className={styles.triangles}>
                 <div className={styles.triangleWrapper}>

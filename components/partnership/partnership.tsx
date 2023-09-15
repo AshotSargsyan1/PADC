@@ -1,14 +1,14 @@
 import Image from 'next/image'
 
 import styles from './partnership.module.css'
+import Picsart from '../../assets/picsart.png'
 import Amazon from '../../assets/amazon.png'
 import Instigate from '../../assets/instigate.png'
 import Ecosyntex from '../../assets/ecosyntex.png'
-import Picsart from '../../assets/picsart.png'
 
 export function Partnership() {
     return (
-        <div className={`${styles.contentWrapper} container`}>
+        <div className={`${styles.contentWrapper} container`} id='partners'>
             <div className={styles.statistics}>
                 <div className={styles.statisticItem}>
                     <div className={styles.elipse}>
@@ -45,10 +45,10 @@ export function Partnership() {
                     <p className={styles.content}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                 </div>
                 <div className={styles.partnersDiv}>
-                    <Image src={Amazon} alt="Amazon" />
-                    <Image src={Ecosyntex} alt="Ecosyntax" />
-                    <Image src={Instigate} alt="Instigate" />
                     <Image src={Picsart} alt="Picsart" />
+                    <Image src={Instigate} alt="Instigate" />
+                    <Image src={Ecosyntex} alt="Ecosyntax" />
+                    <Image src={Amazon} alt="Amazon" />
                 </div>
             </div>
         </div>

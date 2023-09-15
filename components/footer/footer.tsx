@@ -49,15 +49,13 @@ export function Footer() {
                 </div>
                 <div className={styles.navigationDiv}>
                     <div className={styles.navigateLines}>
-                        <Link className={styles.link} href='#'>Home</Link>
-                        <Link className={styles.link} href='#'>Our projects</Link>
-                        <Link className={styles.link} href='#'>What we do</Link>
-                        <Link className={styles.link} href='#'>Our partners</Link>
+                        <Link className={styles.link} href='/'>Home</Link>
+                        <Link className={styles.link} href='/#projects'>Projects</Link>
+                        <Link className={styles.link} href='/#whatwedo'>What we do</Link>
+                        <Link className={styles.link} href='#partners'>Partners</Link>
                     </div>
                     <div className={styles.navigateLines}>
-                        <Link className={styles.link} href='#'>Send request</Link>
-                        <Link className={styles.link} href='#'>Contact us</Link>
-                        <Link className={styles.link} href='#'>Send your number</Link>
+                        <Link className={styles.link} href='/#contact'>Contact</Link>
                     </div>
                 </div>
             </div>

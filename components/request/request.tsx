@@ -1,4 +1,5 @@
 import { Button, TextField } from '@mui/material'
+
 import styles from './request.module.css'
 
 export function Request() {
@@ -34,31 +35,10 @@ export function Request() {
                     }} fullWidth />
                 </div>
                 <div className={styles.inputLine}>
-                    <Button className={styles.cvBtn} variant='contained' sx={{
-                        width: '489px',
-                        height: '58px',
-                        background: 'white',
-                        border: '2px solid #B9B9B9',
-                        color: '#00A5C7',
-                        fontSize: '20px',
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: 'normal',
-                        borderRadius: '10px'
-                    }}>Upload your CV</Button>
-                    <Button variant='contained' sx={{
-                        width: '489px',
-                        height: '58px',
-                        borderRadius: '10px',
-                        background: '#00A5C7',
-                        color: '#FFF',
-                        fontSize: '20px',
-                        fontStyle: 'normal',
-                        fontWeight: 700,
-                        lineHeight: 'normal',
-                    }}>Send Request</Button>
-                </div>
+                    <button className={styles.cvBtn}>Upload your CV</button>
+                    <button className={styles.sendBtn}>Send Request</button>
             </div>
+        </div>
         </div >
     )
 }

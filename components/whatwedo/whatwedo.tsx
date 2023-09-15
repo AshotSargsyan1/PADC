@@ -5,7 +5,7 @@ import styles from './whatwedo.module.css'
 
 export function WhatWeDo() {
     return (
-        <div className={`${styles.contentWrapper} container`}>
+        <div className={`${styles.contentWrapper} container`} id='whatwedo'>
             <div className={styles.titleDiv}>
                 <h2 className={styles.title}>WHAT WE DO</h2>
                 <hr className={styles.hr} />
