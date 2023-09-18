@@ -13,24 +13,24 @@ export function Partnership() {
                 <div className={styles.statisticItem}>
                     <div className={styles.elipse}>
                         <div className={styles.statisticsNumbersWrapper}>
-                            <h6 className={styles.statisticsNumbersTitle}>7 500+</h6>
-                            <p className={styles.statisticsSubTitle}>Lorem ipsum dolor sit amet</p>
+                            <h6 className={styles.statisticsNumbersTitle}>6 +</h6>
+                            <p className={styles.statisticsSubTitle}>Workshops</p>
                         </div>
                     </div>
                 </div>
                 <div className={styles.statisticItem}>
                     <div className={styles.elipse}>
                         <div className={styles.statisticsNumbersWrapper}>
-                            <h6 className={styles.statisticsNumbersTitle}>8.52/10</h6>
-                            <p className={styles.statisticsSubTitle}>Lorem ipsum dolor sit amet</p>
+                            <h6 className={styles.statisticsNumbersTitle}>15 +</h6>
+                            <p className={styles.statisticsSubTitle}>Intershipers</p>
                         </div>
                     </div>
                 </div>
                 <div className={styles.statisticItem}>
                     <div className={styles.elipse}>
                         <div className={styles.statisticsNumbersWrapper}>
-                            <h6 className={styles.statisticsNumbersTitle}>350+</h6>
-                            <p className={styles.statisticsSubTitle}>Lorem ipsum dolor sit amet</p>
+                            <h6 className={styles.statisticsNumbersTitle}>50 +</h6>
+                            <p className={styles.statisticsSubTitle}>Students</p>
                         </div>
                     </div>
                 </div>

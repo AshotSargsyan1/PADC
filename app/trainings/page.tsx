@@ -22,7 +22,6 @@ export default async function Trainings() {
 
     return (
         <>
-            <Header />
             <HeaderContent forAllTrainings={true} />
             <main>
                 <div className={`${styles.announcementsWrapper} container`}>

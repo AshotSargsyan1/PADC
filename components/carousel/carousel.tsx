@@ -1,9 +1,7 @@
 'use client'
-import { useState } from 'react';
 import Image from 'next/image';
 import Slider from 'react-slick';
 
-import padclogo from '../../assets/padc_logo.svg'
 import slideImage from '../../assets/slideimg.png'
 import styles from './carousel.module.css'
 import { ISliderSettings } from '@/models/interfaces/carousel';

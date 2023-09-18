@@ -18,7 +18,6 @@ export const metadata: Metadata = generateMetadataPerPage('PADC - Home')
 export default function Home() {
   return (
     <>
-      <Header />
       <HeaderContent />
       <main className={styles.main}>
         <OurProjects />

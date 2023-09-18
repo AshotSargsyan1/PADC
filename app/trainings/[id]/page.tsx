@@ -15,7 +15,6 @@ const page: FC<pageProps> = ({ params }) => {
 
     return (
         <>
-            <Header />
             <HeaderContent forAllTrainings={true} />
             <Request2 />
             <Contact />

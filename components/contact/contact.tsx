@@ -2,7 +2,7 @@ import styles from './contact.module.css'
 
 export function Contact() {
     return (
-        <div className={`${styles.contentWrapper} container`} id='contacts'>
+        <div className={`${styles.contentWrapper} container`} id='contact'>
             <div>
                 <h2 className={styles.title}>CONTACT US</h2>
                 <hr className={styles.hr} />
