@@ -10,71 +10,28 @@ import { ISliderSettings } from '@/models/interfaces/carousel';
 
 export default function Carousel() {
 
-    const [dataForSlide] = useState([
-        {
-            img: padclogo,
-            subTitle: 'Get the web\'s modern capabilities',
-            title: 'We Design. We Develop. We Inspire.',
-            content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
-        },
-        {
-            img: slideImage,
-            subTitle: '111',
-            title: 'We Design. We Develop. We Inspire.',
-            content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
-        },
-        {
-            img: padclogo,
-            subTitle: '222',
-            title: 'We Design. We Develop. We Inspire.',
-            content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
-        },
-        {
-            img: padclogo,
-            subTitle: '222',
-            title: 'We Design. We Develop. We Inspire.',
-            content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
-        }
-    ])
-
-    const settings: ISliderSettings = {
-        dots: true,
-        infinite: dataForSlide.length > 3,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false
-    };
 
     return (
         <div className={`${styles.sliderWrapper} container`}>
             <div className={styles.mainDiv} >
-                <Slider {...settings}>
-                    {dataForSlide.map(slide => {
-                        return (
-                            <div>
-                                <div style={{ display: 'flex' }}>
-                                    <div className={styles.slideContent} >
-                                        <p className={styles.subTitle}>{slide.subTitle}</p>
-                                        <h2 className={styles.title}>{slide.title}</h2>
-                                        <div className={styles.contentDiv}>
-                                            <p className={styles.content}>{slide.content}</p>
-                                        </div>
-                                    </div>
-                                    <div className={styles.slideImgDiv}>
-                                        <Image src={slide.img} height={500} width={570} alt="slider image" />
-                                    </div>
-                                </div>
+                <div>
+                    <div className={styles.slideContentWrapper}>
+                        <div className={styles.slideContent}>
+                            <p className={styles.subTitle}>Get the web's modern capabilities</p>
+                            <h2 className={styles.title}>We Design. We Develop. We <span className={styles.selectedWordInTitle }>Inspire.</span></h2>
+                            <div className={styles.contentDiv}>
+                                <p className={styles.content}>Get the web's modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.</p>
                             </div>
-                        )
-                    })}
-                </Slider>
+                        </div>
+                        <div className={styles.slideImgDiv}>
+                            <Image src={slideImage} height={350} width={430} alt="slider image" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
-
-
 
 
 export const Carousel2 = ({ projectsData }: any) => {
@@ -95,7 +52,7 @@ export const Carousel2 = ({ projectsData }: any) => {
                     return (
                         <div key={data.id}>
                             <div className={styles.slideContent2}>
-                                <h2 className={styles.title2}>{data.title}</h2>
+                                <h3 className={styles.title2}>{data.title}</h3>
                                 <div className={styles.contentDiv}>
                                     <p className={styles.content2}>{data.description}</p>
                                 </div>
@@ -183,3 +140,48 @@ export const Carousel3 = (team: any) => {
 
 
 // const [index, setIndex] = useState<number>(0);
+
+
+
+
+{/* <Slider {...settings}> */ }
+{/* </Slider> */ }
+
+
+
+/*const [dataForSlide] = useState([
+    {
+        img: padclogo,
+        subTitle: 'Get the web\'s modern capabilities',
+        title: 'We Design. We Develop. We Inspire.',
+        content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
+    },
+    {
+        img: slideImage,
+        subTitle: '111',
+        title: 'We Design. We Develop. We Inspire.',
+        content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
+    },
+    {
+        img: padclogo,
+        subTitle: '222',
+        title: 'We Design. We Develop. We Inspire.',
+        content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
+    },
+    {
+        img: padclogo,
+        subTitle: '222',
+        title: 'We Design. We Develop. We Inspire.',
+        content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
+    }
+])*/
+
+
+// const settings: ISliderSettings = {
+//     dots: true,
+//     infinite: dataForSlide.length > 3,
+//     speed: 500,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     arrows: false
+// };

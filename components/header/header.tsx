@@ -11,7 +11,7 @@ export default function Header() {
                 <div className={styles.logoAndNavigateWrapper}>
                     <div>
                         <Link href='/'>
-                            <Image src={padcLogo} width={205} height={70} alt='PADC logo' />
+                            <Image src={padcLogo} width={175} height={60} alt='PADC logo' />
                         </Link>
                     </div>
                     <div className={styles.navigate}>

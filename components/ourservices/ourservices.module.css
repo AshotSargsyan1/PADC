@@ -4,14 +4,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 220px;
+    margin-bottom: 100px;
 }
 
 .title {
     color: #002B43;
-    font-size: 40px;
+    font-size: 28px;
+    font-weight: 500;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     margin-bottom: 10px;
 }
@@ -75,24 +75,25 @@
 
 .servicesMainTitle {
     color: #FFF;
-    font-size: 50px;
+    font-size: 28px;
+    font-weight: 500;
     font-style: normal;
-    font-weight: 600;
     line-height: normal;
 }
 
 .divForServices {
-    padding: 5px 20px;
-    margin-bottom: 20px;
-    margin-right: 18px;
-    border-radius: 15px;
-    background: #C9F1F6;
     color: #000;
-    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     cursor: pointer;
+    background-color: #c9f1f6;
+    border-radius: 12px;
+    width: 42%;
+    text-align: center;
+    padding: 8px;
+    margin: 9px;
+    transition: all .3s linear !important;
 }
 
 .divForServices:hover {
@@ -116,7 +117,7 @@
 
 .thirdService {
     padding: 21px 0 0 16px;
-    min-height: 590px;
+    min-height: 575px;
     width: 100%;
     background-color: #00B4CE;
     margin-bottom: 20px;

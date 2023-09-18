@@ -1,14 +1,14 @@
 .contentWrapper {
     position: relative;
     display: flex;
-    margin-bottom: 466px;
+    margin-bottom: 120px;
 }
 
 .title {
     color: #002B43;
     font-size: 28px;
-    font-style: normal;
     font-weight: 500;
+    font-style: normal;
     line-height: normal;
     margin-bottom: 16px;
 }

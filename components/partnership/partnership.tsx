@@ -42,13 +42,13 @@ export function Partnership() {
                     <hr className={styles.hr} />
                 </div>
                 <div className={styles.contentDiv}>
-                    <p className={styles.content}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <p className={styles.content}>More than 85% of our clients have been using our services for a long-term sticking with us for over 3+ years. We are like a family. We love them as much as they love us. We have a 97.9% clients' repetition rate. In other words. 97.9% of our clients keep choosing PADC for their business needs and our developers completed more than 30 projects with 100% project completion rate. We worked with 5+ industries.</p>
                 </div>
                 <div className={styles.partnersDiv}>
-                    <Image src={Picsart} alt="Picsart" />
-                    <Image src={Instigate} alt="Instigate" />
-                    <Image src={Ecosyntex} alt="Ecosyntax" />
-                    <Image src={Amazon} alt="Amazon" />
+                    <Image src={Picsart} height={50} alt="Picsart" />
+                    <Image src={Instigate} height={50} alt="Instigate" />
+                    <Image src={Ecosyntex} height={50} alt="Ecosyntax" />
+                    <Image src={Amazon} height={50} alt="Amazon" />
                 </div>
             </div>
         </div>

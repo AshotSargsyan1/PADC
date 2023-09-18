@@ -1,13 +1,13 @@
 .contentWrapper {
-    height: 620px;
-    margin-bottom: 210px;
+    margin-top: 100px;
+    min-height: 500px;
 }
 
 .title {
     color: #002B43;
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: 500;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
     margin-bottom: 33px;
 }
@@ -15,13 +15,13 @@
 .hr {
     width: 77px;
     height: 8px;
-    margin-bottom: 110px;
+    margin-bottom: 50px;
     background: #002B43;
     transition: width .5s ease;
 }
 
 .hr:hover {
-    width: 218px
+    width: 185px
 }
 
 .contactAndMapWrapper {
@@ -47,6 +47,7 @@
 .contactInfoDiv {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .contactInfoFields strong:last-child {
@@ -55,11 +56,11 @@
 
 .contactInfoField {
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
 }
 
 .contactInfoDiv a:last-child {
@@ -73,11 +74,11 @@
 
 .contactInfo {
     color: #000;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
 }
 
 .enterNumberDiv {
@@ -87,13 +88,12 @@
 .titleForNumber {
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
     margin-bottom: 16px;
 }
 
 .subTextForNumber {
-    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -102,8 +102,8 @@
 
 .inputForNumber {
     width: 390px;
-    height: 61px;
-    border-radius: 10px;
+    height: 38px;
+    border-radius: 5px;
     border: 2px solid #B9B9B9;
     margin-right: 22px;
     padding-left: 5px;
@@ -112,15 +112,14 @@
 
 .buttonForSendNumber {
     border: none;
-    width: 171px;
-    height: 61px;
-    flex-shrink: 0;
-    border-radius: 10px;
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 5px;
     background: #00A5C7;
     color: #FFF;
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
     cursor: pointer;
 }
@@ -129,7 +128,7 @@
     position: relative;
     text-align: right;
     width: 100%;
-    height: 100%;
+    height: 500px;
 }
 
 .gmap_canvas {

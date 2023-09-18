@@ -16,33 +16,28 @@ export function Footer() {
                 <div className={styles.logoDiv}>
                     <div className={styles.padcLogoDiv}>
                         <Link href='/'>
-                            <Image src={padcLogo} height={90} width={270} alt='padc footer logo' />
+                            <Image src={padcLogo} height={60} width={176} alt='padc footer logo' />
                         </Link>
                     </div>
                     <div className={styles.logosWrapper}>
                         <div className={styles.logoWrapper}>
-                            <Link href='https://www.facebook.com/padc.ltd/'>
+                            <Link target='_blank' href='https://www.facebook.com/padc.ltd/'>
                                 <Image src={facebook} alt='facebook' />
                             </Link>
                         </div>
                         <div className={styles.logoWrapper}>
-                            <Link href='#'>
+                            <Link target='_blank' href='https://www.instagram.com/padc.llc/'>
                                 <Image src={instagram} alt='instagram' />
                             </Link>
                         </div>
                         <div className={styles.logoWrapper}>
-                            <Link href='#'>
+                            <Link target='_blank' href='https://twitter.com/PADCLLC'>
                                 <Image src={twitter} alt='twitter' />
                             </Link>
                         </div>
                         <div className={styles.logoWrapper}>
-                            <Link href='https://www.linkedin.com/company/padc-llc/'>
+                            <Link target='_blank' href='https://www.linkedin.com/company/padc-llc/'>
                                 <Image src={linkedin} alt='linkedin' />
-                            </Link>
-                        </div>
-                        <div className={styles.logoWrapper}>
-                            <Link href='#'>
-                                <Image src={google} alt='google' />
                             </Link>
                         </div>
                     </div>
@@ -60,7 +55,7 @@ export function Footer() {
                 </div>
             </div>
             <div className={styles.allRightsDiv}>
-                <h6 className={styles.allRightsTitle}>© 2020 PADC LLC All Rights Reserved</h6>
+                <h6 className={styles.allRightsTitle}>© 2023 PADC LLC All Rights Reserved</h6>
             </div>
         </footer>
     )

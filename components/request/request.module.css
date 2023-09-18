@@ -1,10 +1,9 @@
 .contentWrapper {
     width: 100%;
-    max-width: 1010px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 282px;
+    margin-top: 100px;
 }
 
 .titleDiv {
@@ -12,8 +11,9 @@
 }
 
 .title {
-    font-weight: 400;
-    font-size: 40px;
+    color: #002B43;
+    font-size: 28px;
+    font-weight: 500;
     line-height: 50px
 }
 
@@ -27,7 +27,7 @@
 
 .hr2 {
     height: 5px;
-    width: 95px;
+    width: 68px;
     border: none;
     background: #00C4E0;
     transition: width .5s ease;
@@ -42,48 +42,50 @@
 }
 
 .contentDiv {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .content {
-    color: #8E8E8E;
-    text-align: center;
-    font-size: 24px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 400;
 }
 
 .inputsWrapper {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .inputLine {
-    width: 100%;
-    margin-bottom: 47px;
+    width: 535px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
 }
 
 .cvBtn,
 .sendBtn {
-    width: 489px;
-    height: 58px;
+    height: 40px;
     background-color: white;
-    border: 2px solid #B9B9B9;
+    border: 2px solid #00A5C7;
     color: #00A5C7;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    padding: 10px 12px;
 }
 
 .sendBtn {
     background-color: #00A5C7;
     color: #FFF;
-    font-weight: 700;
+    border: none;
 }
 
 .inputsWrapper>.inputLine:last-child {
@@ -93,8 +95,8 @@
 .selectedWordInTitle {
     color: #00A5C7;
     text-align: center;
-    font-size: 40px;
+    font-size: 28px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
 }

@@ -10,22 +10,22 @@ export function Request() {
                 <hr className={styles.hr} />
             </div>
             <div className={styles.contentDiv}>
-                <p className={styles.content}>There are many variations of passages of Lorem Ipsum available</p>
+                <p className={styles.content}>Let's Meet… Coffee Is On Us :&#41;</p>
             </div>
             <div className={styles.inputsWrapper}>
                 <div className={styles.inputLine}>
                     <TextField variant='outlined' label='Name Surename' fullWidth sx={{
-                        borderRadius: '10px'
+                        borderRadius: '10px',
                     }} />
                 </div>
                 <div className={styles.inputLine}>
                     <TextField variant='outlined' label='Phone' sx={{
-                        width: '489px',
+                        width: '50%',
                         mr: '35px',
                         borderRadius: '10px'
                     }} />
                     <TextField variant='outlined' label='City' sx={{
-                        width: '489px',
+                        width: '50%',
                         borderRadius: '10px'
                     }} />
                 </div>
@@ -37,8 +37,8 @@ export function Request() {
                 <div className={styles.inputLine}>
                     <button className={styles.cvBtn}>Upload your CV</button>
                     <button className={styles.sendBtn}>Send Request</button>
+                </div>
             </div>
-        </div>
         </div >
     )
 }
@@ -76,29 +76,10 @@ export function Request2() {
                     }} fullWidth />
                 </div>
                 <div className={styles.inputLine}>
-                    <Button className={styles.cvBtn} variant='contained' sx={{
-                        width: '489px',
-                        height: '58px',
-                        background: 'white',
-                        border: '2px solid #B9B9B9',
-                        color: '#00A5C7',
-                        fontSize: '20px',
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: 'normal',
-                        borderRadius: '10px'
-                    }}>Upload your CV</Button>
-                    <Button variant='contained' sx={{
-                        width: '489px',
-                        height: '58px',
-                        borderRadius: '10px',
-                        background: '#00A5C7',
-                        color: '#FFF',
-                        fontSize: '20px',
-                        fontStyle: 'normal',
-                        fontWeight: 700,
-                        lineHeight: 'normal',
-                    }}>Send Request</Button>
+                    <div className={styles.inputLine}>
+                        <button className={styles.cvBtn}>Upload your CV</button>
+                        <button className={styles.sendBtn}>Send Request</button>
+                    </div>
                 </div>
             </div>
         </div >

@@ -15,7 +15,7 @@ export async function Team() {
                 <hr className={styles.hr} />
             </div>
             <div className={styles.ourTeamContentWrapper}>
-                <p className={styles.ourTeamContent}>There are many variations of passages of Lorem Ipsum available</p>
+                <p className={styles.ourTeamContent}>The Faces Behind our Success</p>
             </div>
             <Carousel3 team={teamData} />
         </div>
