@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 
 import { generateMetadataPerPage } from "@/helpers/metadata";
-import Header from "@/components/header/header";
 import { HeaderContent } from "@/components/headercontent/headercontent";
 import JobAdvertisment from "@/components/jobadvertisement/jobadvertisment";
 import { Request } from "@/components/request/request";

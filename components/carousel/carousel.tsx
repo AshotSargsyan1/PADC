@@ -16,7 +16,7 @@ export default function Carousel() {
                     <div className={styles.slideContentWrapper}>
                         <div className={styles.slideContent}>
                             <p className={styles.subTitle}>Get the web's modern capabilities</p>
-                            <h2 className={styles.title}>We Design. We Develop. We <span className={styles.selectedWordInTitle }>Inspire.</span></h2>
+                            <h2 className={styles.title}>We Design. We Develop. We <span className={styles.selectedWordInTitle}>Inspire.</span></h2>
                             <div className={styles.contentDiv}>
                                 <p className={styles.content}>Get the web's modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.</p>
                             </div>
@@ -74,10 +74,6 @@ export const Carousel3 = (team: any) => {
         arrows: false
     };
 
-    function imageSrc(path: string): string {
-        return `${process.env.DB_APP_BASE_URL}assets/images/team/${path}`
-    }
-
     return (
         <div className={styles.ourTeamInfo}>
             <Slider {...settings}>
@@ -86,7 +82,7 @@ export const Carousel3 = (team: any) => {
                         <div className={styles.cardWrapper}>
                             <figure className={styles.cardInfo}>
                                 <div className={styles.darkDivOnCard}></div>
-                                <Image loader={() => imageSrc(employee.image)} src={imageSrc(employee.image)} width={500} height={570} alt='card image' className={styles.cardImg} />
+                                <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/team/${employee.image}`} width={500} height={570} alt='card image' className={styles.cardImg} priority/>
                                 <figcaption>
                                     <h3 className={styles.nameAndSurename}>{employee.name}</h3>
                                     <div className={styles.profession}>

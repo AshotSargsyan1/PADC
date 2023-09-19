@@ -1,8 +1,7 @@
 import { FC } from "react"
 
-import Header from "@/components/header/header"
 import { HeaderContent } from "@/components/headercontent/headercontent"
-import { Request2 } from "@/components/request/request"
+import { Request } from "@/components/request/request"
 import { Contact } from "@/components/contact/contact"
 
 interface pageProps {
@@ -16,7 +15,7 @@ const page: FC<pageProps> = ({ params }) => {
     return (
         <>
             <HeaderContent forAllTrainings={true} />
-            <Request2 />
+            <Request />
             <Contact />
         </>
     )

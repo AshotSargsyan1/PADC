@@ -6,7 +6,7 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'padcllc.com',
                 port: '',
-                pathname: '/images/team/**',
+                pathname: '/assets/images/team/**',
             },
         ],
     },

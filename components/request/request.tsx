@@ -1,5 +1,4 @@
 'use client'
-
 import { TextField } from '@mui/material'
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -8,12 +7,13 @@ import styles from './request.module.css'
 
 export function Request() {
 
-    const { register, handleSubmit, formState } = useForm<IFormForJoin>({
+    const { register, handleSubmit, formState, getValues, watch, resetField } = useForm<IFormForJoin>({
         mode: 'onChange'
     });
     const { errors } = formState
+    watch('file')
 
-    const onSubmit: SubmitHandler<IFormForJoin> = (data: IFormForJoin) => console.log(data);
+    const onSubmit: SubmitHandler<IFormForJoin> = (data: IFormForJoin) => console.log(getValues('file'))
 
     return (
         <div className={styles.contentWrapper}>
@@ -41,15 +41,24 @@ export function Request() {
                         <TextField variant='outlined' label='Address' fullWidth error={!!errors.address} {...register('address', { required: 'Address is required' })} helperText={errors.address?.message} />
                     </div>
                     <div className={styles.inputLine}>
-                        <TextField variant='outlined' label='E-mail' {...register('email', { required: 'Email is required', pattern: {
-                            value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                            message: 'Invalid email format'
-                        } })} helperText={errors.email?.message} fullWidth error={!!errors.email} />
+                        <TextField variant='outlined' label='E-mail' {...register('email', {
+                            required: 'Email is required', pattern: {
+                                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                                message: 'Invalid email format'
+                            }
+                        })} helperText={errors.email?.message} fullWidth error={!!errors.email} />
                     </div>
+                    {!!getValues('file')?.[0]?.name && <div className={styles.fileNameShowDiv}>
+                        <p className={styles.fileName}>{getValues('file')[0].name}</p>
+                        <button type='button' onClick={() => {
+                            resetField("file")
+                        }} className={styles.removeFileBtn}>X</button>
+                    </div>}
                     <div className={styles.inputLine}>
                         <div className={styles.inputLine}>
-                            <button className={styles.cvBtn}>Upload your CV</button>
-                            <button className={styles.sendBtn}>Send Request</button>
+                            <label htmlFor="file" className={styles.uploadCvLabel}>Upload your CV</label>
+                            <input type='file' id='file' className={styles.uploadCvInput} {...register('file')} />
+                            <button type='submit' className={styles.sendBtn}>Send Request</button>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/header/header";
 
 import { Contact } from "@/components/contact/contact";
 import { HeaderContent } from "@/components/headercontent/headercontent";
