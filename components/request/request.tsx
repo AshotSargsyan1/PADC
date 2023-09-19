@@ -1,19 +1,66 @@
 'use client'
 import { TextField } from '@mui/material'
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { useState } from 'react'
 
 import { IFormForJoin } from '../../models/interfaces/react-hook-form'
 import styles from './request.module.css'
 
 export function Request() {
 
-    const { register, handleSubmit, formState, getValues, watch, resetField } = useForm<IFormForJoin>({
-        mode: 'onChange'
+    const [isSending, setIsSending] = useState(false);
+
+    const { register, handleSubmit, formState, getValues, watch, resetField, reset, control } = useForm<IFormForJoin>({
+        mode: 'onChange',
+        defaultValues: {
+            name: "",
+            phone: "",
+            address: "",
+            email: ""
+        }
     });
+
+    const formData = new FormData()
     const { errors } = formState
     watch('file')
 
-    const onSubmit: SubmitHandler<IFormForJoin> = (data: IFormForJoin) => console.log(getValues('file'))
+    const sendRequest = async () => {
+        setIsSending(true);
+
+        for (const key in getValues()) {
+            if (key === 'file') {
+                formData.append('file', getValues()[key][0]);
+            } else {
+                formData.append(key, getValues()[key as keyof IFormForJoin]);
+            }
+        }
+
+        await fetch('https://api.padcllc.com/contact-requests', {
+            method: 'POST',
+            body: formData
+        })
+            .then(resp => {
+                if (resp?.ok) {
+                    reset({
+                        name: "",
+                        phone: "",
+                        address: "",
+                        email: "",
+                        file: ""
+                    })
+                }
+            }).finally(() => {
+                setIsSending(false)
+            });
+    }
+
+    const onSubmit: SubmitHandler<IFormForJoin> = (data: IFormForJoin) => sendRequest()
+    const borderBottomStyle = {
+        borderBottom: "2px solid #00A5C7",
+        borderTop: "2px solid #E3E3E3",
+        borderLeft: "2px solid #E3E3E3",
+        borderRight: "2px solid #E3E3E3"
+    }
 
     return (
         <div className={styles.contentWrapper}>
@@ -27,26 +74,67 @@ export function Request() {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className={styles.inputsWrapper}>
                     <div className={styles.inputLine}>
-                        <TextField variant='outlined' label='Name Surename' fullWidth error={!!errors.name} {...register("name", { required: 'Name and surename is required' })} helperText={errors.name?.message} />
+                        <Controller
+                            name='name'
+                            control={control}
+                            render={({ field }) => <TextField sx={{
+                                "& .MuiOutlinedInput-root.Mui-focused": {
+                                    "& > fieldset": {
+                                        ...borderBottomStyle
+                                    }
+                                }
+                            }} {...field} variant='outlined' label='Name Surename' fullWidth error={!!errors.name} {...register("name", { required: 'Name and surename is required' })} helperText={errors.name?.message} />}
+                        />
                     </div>
                     <div className={styles.inputLine}>
-                        <TextField variant='outlined' label='Phone' fullWidth error={!!errors.phone} {...register('phone', {
-                            required: 'Phone is required', pattern: {
-                                value: /^[0-9+-]+$/,
-                                message: 'The phone number must contain only the "+" symbol and numbers'
+                        <Controller
+                            name='phone'
+                            control={control}
+                            render={({ field }) => <TextField sx={{
+                                "& .MuiOutlinedInput-root.Mui-focused": {
+                                    "& > fieldset": {
+                                        ...borderBottomStyle
+                                    }
+                                }
+                            }} {...field} variant='outlined' label='Phone' fullWidth error={!!errors.phone} {...register('phone', {
+                                required: 'Phone is required', pattern: {
+                                    value: /^[0-9+-]+$/,
+                                    message: 'The phone number must contain only the "+" symbol and numbers'
+                                }
+                            })} helperText={errors.phone?.message} />
                             }
-                        })} helperText={errors.phone?.message} />
+                        />
                     </div>
                     <div className={styles.inputLine}>
-                        <TextField variant='outlined' label='Address' fullWidth error={!!errors.address} {...register('address', { required: 'Address is required' })} helperText={errors.address?.message} />
+                        <Controller
+                            name='address'
+                            control={control}
+                            render={({ field }) => <TextField sx={{
+                                "& .MuiOutlinedInput-root.Mui-focused": {
+                                    "& > fieldset": {
+                                        ...borderBottomStyle
+                                    }
+                                }
+                            }} {...field} variant='outlined' label='Address' fullWidth {...register('address', { required: 'Address is required' })} helperText={errors.address?.message} error={!!errors.address} />}
+                        />
                     </div>
                     <div className={styles.inputLine}>
-                        <TextField variant='outlined' label='E-mail' {...register('email', {
-                            required: 'Email is required', pattern: {
-                                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                                message: 'Invalid email format'
-                            }
-                        })} helperText={errors.email?.message} fullWidth error={!!errors.email} />
+                        <Controller
+                            name='email'
+                            control={control}
+                            render={({ field }) => <TextField sx={{
+                                "& .MuiOutlinedInput-root.Mui-focused": {
+                                    "& > fieldset": {
+                                        ...borderBottomStyle
+                                    }
+                                }
+                            }} {...field} variant='outlined' label='E-mail' fullWidth {...register('email', {
+                                required: 'Email is required', pattern: {
+                                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                                    message: 'Invalid email format'
+                                }
+                            })} helperText={errors.email?.message} error={!!errors.email} />}
+                        />
                     </div>
                     {!!getValues('file')?.[0]?.name && <div className={styles.fileNameShowDiv}>
                         <p className={styles.fileName}>{getValues('file')[0].name}</p>
@@ -57,8 +145,10 @@ export function Request() {
                     <div className={styles.inputLine}>
                         <div className={styles.inputLine}>
                             <label htmlFor="file" className={styles.uploadCvLabel}>Upload your CV</label>
-                            <input type='file' id='file' className={styles.uploadCvInput} {...register('file')} />
-                            <button type='submit' className={styles.sendBtn}>Send Request</button>
+                            <input type='file' id='file' accept=".pdf" className={styles.uploadCvInput} {...register('file')} />
+                            <button type='submit' disabled={isSending} style={{cursor: isSending ? "not-allowed" : "pointer"}} className={styles.sendBtn}>
+                                {isSending ? 'Sending...' : 'Send Request'}
+                            </button>
                         </div>
                     </div>
                 </div>

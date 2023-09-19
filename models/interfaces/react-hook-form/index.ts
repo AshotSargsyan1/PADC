@@ -1,6 +1,6 @@
 export interface IFormForJoin {
     name: string,
-    phone: number;
+    phone: string;
     address: string,
     email: string,
     file?: any
