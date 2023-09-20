@@ -7,8 +7,6 @@ import styles from './carousel.module.css'
 import { ISliderSettings } from '@/models/interfaces/carousel';
 
 export default function Carousel() {
-
-
     return (
         <div className={`${styles.sliderWrapper} container`}>
             <div className={styles.mainDiv} >
@@ -33,10 +31,9 @@ export default function Carousel() {
 
 
 export const Carousel2 = ({ projectsData }: any) => {
-
     const settings: ISliderSettings = {
         dots: true,
-        infinite: projectsData.data.length > 3,
+        infinite: projectsData?.data?.length > 3,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -46,7 +43,7 @@ export const Carousel2 = ({ projectsData }: any) => {
     return (
         <div className={`${styles.sliderWrapper2} container`}>
             <Slider className={styles.slider} {...settings}>
-                {!!projectsData.data.length && projectsData.data.map((data: any) => {
+                {!!projectsData?.data?.length && projectsData.data.map((data: any) => {
                     return (
                         <div key={data.id}>
                             <div className={styles.slideContent2}>
@@ -67,7 +64,7 @@ export const Carousel3 = (team: any) => {
 
     const settings: ISliderSettings = {
         dots: true,
-        infinite: team.team.length > 3,
+        infinite: team?.team?.length > 3,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -93,89 +90,8 @@ export const Carousel3 = (team: any) => {
                         </div>
                     )
                 })}
-            </Slider >
+            </Slider>
         </div >
 
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <div className={styles.btnsForSlide}>
-                <Image src={prevIcon} onClick={handlePrevious} className={styles.indicatorBtn} alt='slide indicators' />
-                {dataForSlide.map(data => {
-                    return <div className={styles.elipse} />
-                })}
-                <Image src={nextIcon} onClick={handleNext} className={styles.indicatorBtn} alt='slide indicators' />
-            </div> */}
-
-// const length: number = dataForSlide.length;
-
-// const handlePrevious = (): void => {
-//     const newIndex = index - 1;
-//     setIndex(newIndex < 0 ? length - 1 : newIndex);
-// };
-
-// const handleNext = (): void => {
-//     const newIndex = index + 1;
-//     setIndex(newIndex >= length ? 0 : newIndex);
-// };
-
-
-
-// const [index, setIndex] = useState<number>(0);
-
-
-
-
-{/* <Slider {...settings}> */ }
-{/* </Slider> */ }
-
-
-
-/*const [dataForSlide] = useState([
-    {
-        img: padclogo,
-        subTitle: 'Get the web\'s modern capabilities',
-        title: 'We Design. We Develop. We Inspire.',
-        content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
-    },
-    {
-        img: slideImage,
-        subTitle: '111',
-        title: 'We Design. We Develop. We Inspire.',
-        content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
-    },
-    {
-        img: padclogo,
-        subTitle: '222',
-        title: 'We Design. We Develop. We Inspire.',
-        content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
-    },
-    {
-        img: padclogo,
-        subTitle: '222',
-        title: 'We Design. We Develop. We Inspire.',
-        content: 'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.'
-    }
-])*/
-
-
-// const settings: ISliderSettings = {
-//     dots: true,
-//     infinite: dataForSlide.length > 3,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: false
-// };

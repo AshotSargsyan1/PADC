@@ -80,6 +80,13 @@
     border-radius: 5px;
     cursor: pointer;
     padding: 10px 12px;
+    transition: all .6s ease;
+}
+
+.uploadCvLabel:hover,
+.sendBtn:hover {
+    background-color: #4096FF;
+    color: white;
 }
 
 .sendBtn {
@@ -92,15 +99,14 @@
     display: none;
 }
 
-.fileNameShowDiv{
+.fileNameShowDiv {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    border: 1px solid red
+    margin-bottom: 10px
 }
 
-.removeFileBtn{
+.removeFileBtn {
     border: none;
     background-color: white;
     cursor: pointer;

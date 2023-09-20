@@ -6,10 +6,10 @@ import facebook from '../../assets/facebook.svg'
 import instagram from '../../assets/instagram.svg'
 import twitter from '../../assets/twitter.svg'
 import linkedin from '../../assets/linkedin.svg'
-import google from '../../assets/google.svg'
 import styles from './footer.module.css'
 
 export function Footer() {
+
     return (
         <footer className={`${styles.footer} container`}>
             <div className={`${styles.logoAndLinksWrapper} container`}>
@@ -55,7 +55,7 @@ export function Footer() {
                 </div>
             </div>
             <div className={styles.allRightsDiv}>
-                <h6 className={styles.allRightsTitle}>© 2023 PADC LLC All Rights Reserved</h6>
+                <h6 className={styles.allRightsTitle}>© {new Date().getFullYear()} PADC LLC All Rights Reserved</h6>
             </div>
         </footer>
     )

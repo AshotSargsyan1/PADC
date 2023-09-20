@@ -8,7 +8,7 @@ import styles from './request.module.css'
 
 export function Request() {
 
-    const [isSending, setIsSending] = useState(false);
+    const [isSending, setIsSending] = useState<boolean>(false);
 
     const { register, handleSubmit, formState, getValues, watch, resetField, reset, control } = useForm<IFormForJoin>({
         mode: 'onChange',
@@ -20,19 +20,17 @@ export function Request() {
         }
     });
 
-    const formData = new FormData()
+    const formData: FormData = new FormData()
     const { errors } = formState
     watch('file')
 
-    const sendRequest = async () => {
+    const sendRequest = async (): Promise<void> => {
         setIsSending(true);
 
         for (const key in getValues()) {
-            if (key === 'file') {
-                formData.append('file', getValues()[key][0]);
-            } else {
-                formData.append(key, getValues()[key as keyof IFormForJoin]);
-            }
+            key === 'file'
+                ? formData.append('file', getValues()[key][0])
+                : formData.append(key, getValues()[key as keyof IFormForJoin]);
         }
 
         await fetch('https://api.padcllc.com/contact-requests', {
@@ -40,6 +38,7 @@ export function Request() {
             body: formData
         })
             .then(resp => {
+                alert("Your request has been sent successfully")
                 if (resp?.ok) {
                     reset({
                         name: "",
@@ -49,12 +48,15 @@ export function Request() {
                         file: ""
                     })
                 }
-            }).finally(() => {
+            })
+            .catch(_ => alert("Something went wrong!"))
+            .finally(() => {
                 setIsSending(false)
             });
     }
 
-    const onSubmit: SubmitHandler<IFormForJoin> = (data: IFormForJoin) => sendRequest()
+    const onSubmit: SubmitHandler<IFormForJoin> = (): Promise<void> => sendRequest()
+
     const borderBottomStyle = {
         borderBottom: "2px solid #00A5C7",
         borderTop: "2px solid #E3E3E3",
@@ -146,7 +148,7 @@ export function Request() {
                         <div className={styles.inputLine}>
                             <label htmlFor="file" className={styles.uploadCvLabel}>Upload your CV</label>
                             <input type='file' id='file' accept=".pdf" className={styles.uploadCvInput} {...register('file')} />
-                            <button type='submit' disabled={isSending} style={{cursor: isSending ? "not-allowed" : "pointer"}} className={styles.sendBtn}>
+                            <button type='submit' disabled={isSending} style={{ cursor: isSending ? "not-allowed" : "pointer" }} className={styles.sendBtn}>
                                 {isSending ? 'Sending...' : 'Send Request'}
                             </button>
                         </div>

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { StatisticsGenerateString } from '@/models/enums/partnership'
 import styles from './partnership.module.css'
 import Picsart from '../../assets/picsart.png'
 import Amazon from '../../assets/amazon.png'
@@ -7,33 +8,26 @@ import Instigate from '../../assets/instigate.png'
 import Ecosyntex from '../../assets/ecosyntex.png'
 
 export function Partnership() {
+
+    function createStatistics(count: number, type: StatisticsGenerateString): JSX.Element {
+        return (
+            <div className={styles.statisticItem}>
+                <div className={styles.elipse}>
+                    <div className={styles.statisticsNumbersWrapper}>
+                        <h6 className={styles.statisticsNumbersTitle}>{count} +</h6>
+                        <p className={styles.statisticsSubTitle}>{type}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className={`${styles.contentWrapper} container`} id='partners'>
             <div className={styles.statistics}>
-                <div className={styles.statisticItem}>
-                    <div className={styles.elipse}>
-                        <div className={styles.statisticsNumbersWrapper}>
-                            <h6 className={styles.statisticsNumbersTitle}>6 +</h6>
-                            <p className={styles.statisticsSubTitle}>Workshops</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.statisticItem}>
-                    <div className={styles.elipse}>
-                        <div className={styles.statisticsNumbersWrapper}>
-                            <h6 className={styles.statisticsNumbersTitle}>15 +</h6>
-                            <p className={styles.statisticsSubTitle}>Intershipers</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.statisticItem}>
-                    <div className={styles.elipse}>
-                        <div className={styles.statisticsNumbersWrapper}>
-                            <h6 className={styles.statisticsNumbersTitle}>50 +</h6>
-                            <p className={styles.statisticsSubTitle}>Students</p>
-                        </div>
-                    </div>
-                </div>
+                {createStatistics(6, StatisticsGenerateString.WORKSHOPS)}
+                {createStatistics(15, StatisticsGenerateString.INTERSHIPERS)}
+                {createStatistics(50, StatisticsGenerateString.STUDENTS)}
             </div>
             <div className={styles.titleAndContentWrapper}>
                 <div className={styles.titleDiv}>

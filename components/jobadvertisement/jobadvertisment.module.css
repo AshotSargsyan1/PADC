@@ -45,6 +45,12 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    transition: all .6s ease;
+}
+
+.joinUs:hover {
+    background-color: #4096FF;
+    color: white;
 }
 
 .showMoreDiv {

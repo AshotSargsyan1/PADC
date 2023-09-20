@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import padcLogo from '../../assets/padc_logo.svg'
 import styles from './header.module.css'
@@ -9,9 +10,10 @@ import styles from './header.module.css'
 export default function Header() {
 
     const [showFixedHidden, setShowFixedHidden] = useState<boolean>(false)
+    const router = useRouter()
 
-    const handleScroll = () => {
-        if(window.scrollY >= 500) {
+    const handleScroll = (): void => {
+        if (window.scrollY >= 500) {
             setShowFixedHidden(true)
         } else {
             setShowFixedHidden(false)
@@ -20,7 +22,7 @@ export default function Header() {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-        
+
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -34,33 +36,15 @@ export default function Header() {
                         </Link>
                     </div>
                     <div className={styles.navigate}>
-                        <nav className={styles.nav}>
-                            <Link href='/' className={styles.navText}>HOME</Link>
-                        </nav>
-                        <nav className={styles.nav}>
-                            <Link href='/#projects' className={styles.navText}>PROJECTS</Link>
-                        </nav>
-                        <nav className={styles.nav}>
-                            <Link href='/#whatwedo' className={styles.navText}>WHAT WE DO</Link>
-                        </nav>
-                        <nav className={styles.nav}>
-                            <Link href='/#services' className={styles.navText}>SERVICES</Link>
-                        </nav>
-                        <nav className={styles.nav}>
-                            <Link href='/#partners' className={styles.navText}>PARTNERS</Link>
-                        </nav>
-                        <nav className={styles.nav}>
-                            <Link href='/#team' className={styles.navText}>TEAM</Link>
-                        </nav>
-                        <nav className={styles.nav}>
-                            <Link href='/#contact' className={styles.navText}>CONTACT</Link>
-                        </nav>
-                        <nav className={styles.nav}>
-                            <Link href='/trainings' className={styles.navText}>TRAININGS</Link>
-                        </nav>
-                        <nav className={styles.nav}>
-                            <Link href='/career' className={styles.navText}>CAREER</Link>
-                        </nav>
+                        <Link href='/' className={styles.navText}>HOME</Link>
+                        <Link href='/#projects' className={styles.navText}>PROJECTS</Link>
+                        <Link href='/#whatwedo' className={styles.navText}>WHAT WE DO</Link>
+                        <Link href='/#services' className={styles.navText}>SERVICES</Link>
+                        <Link href='/#partners' className={styles.navText}>PARTNERS</Link>
+                        <Link href='/#team' className={styles.navText}>TEAM</Link>
+                        <Link href='/#contact' className={styles.navText}>CONTACT</Link>
+                        <Link href='/trainings' className={styles.navText}>TRAININGS</Link>
+                        <Link href='/career' className={styles.navText}>CAREER</Link>
                     </div>
                 </div>
             </div>

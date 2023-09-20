@@ -1,4 +1,5 @@
 import Carousel from '../carousel/carousel'
+
 import styles from './headercontent.module.css'
 
 export function HeaderContent({ forAllTrainings, forCareer }: any) {
@@ -32,9 +33,3 @@ export function HeaderContent({ forAllTrainings, forCareer }: any) {
         </>
     )
 }
-
-
-
-{/* <div className={styles.padcLlcYear}>
-                <p className={styles.padcLlcYearP}>© 2020 PADC LLC.</p>
-            </div> */}

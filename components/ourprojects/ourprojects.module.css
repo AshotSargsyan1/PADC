@@ -26,7 +26,6 @@
     width: 225px
 }
 
-
 .triangles {
     position: absolute;
     right: 0;
@@ -41,18 +40,3 @@
     height: 300px;
     width: 350px;
 }
-
-/* 
-.triangle1 {
-    transition: all .3s linear !important;
-    transform: translate(-13.4625px, -6.7375px);
-}
-
-.triangle2 {
-    transition: all .3s linear !important;
-}
-
-.triangle3 {
-    margin-top: 82px;
-    margin-bottom: 60px;
-} */

@@ -1,6 +1,7 @@
 import styles from './ourservices.module.css'
 
 export function OurServices() {
+
     return (
         <div className={`${styles.contentWrapper} container`} id='services'>
             <div>
@@ -21,7 +22,6 @@ export function OurServices() {
                                     <div className={styles.divForServices}>React Js</div>
                                     <div className={styles.divForServices}>HTML5/CSS3</div>
                                 </div>
-
                                 <h5 className={styles.titlesForServices}>Backend</h5>
                                 <div className={styles.divForServicesWrapper}>
                                     <div className={styles.divForServices}>PYTHON</div>
@@ -65,7 +65,6 @@ export function OurServices() {
                                     <div className={styles.divForServices}>React Js</div>
                                     <div className={styles.divForServices}>HTML5/CSS3</div>
                                 </div>
-
                                 <h5 className={styles.titlesForServices}>Backend</h5>
                                 <div className={styles.divForServicesWrapper}>
                                     <div className={styles.divForServices}>PYTHON</div>

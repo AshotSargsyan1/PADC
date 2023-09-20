@@ -14,8 +14,6 @@ export default function Career() {
             <HeaderContent forCareer={true} />
             <JobAdvertisment />
             <JobAdvertisment />
-            <JobAdvertisment />
-            <JobAdvertisment />
             <Request />
         </>
     )

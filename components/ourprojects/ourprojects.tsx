@@ -1,14 +1,15 @@
-import Image from 'next/image'
-
 import { Carousel2 } from '../carousel/carousel'
+import { IProjects } from '@/models/interfaces/ourprojects'
+
 import Triangle1 from '../../assets/triangle1.svg'
 import Triangle2 from '../../assets/triangle2.svg'
 import Triangle3 from '../../assets/triangle3.svg'
 import styles from './ourprojects.module.css'
 
-
-export function getProjects() {
-    return fetch('https://api.padcllc.com/projects', { next: { revalidate: 150 } }).then(res => res.json())
+export function getProjects(): Promise<IProjects> {
+    return fetch('https://api.padcllc.com/projects', { next: { revalidate: 150 } })
+        .then(res => res.json())
+        .catch(_ => alert("Something went wrong!!!"))
 }
 
 export default async function OurProjects() {
