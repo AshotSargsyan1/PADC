@@ -21,12 +21,6 @@ export function Contact() {
                             <a className={styles.contactInfo} href="mailto:contact@padcllc.com">contact@padcllc.com</a>
                         </div>
                     </div>
-                    <div className={styles.enterNumberDiv}>
-                        <h6 className={styles.titleForNumber}>Write your number</h6>
-                        <p className={styles.subTextForNumber}>We will call you</p>
-                        <input type="text" className={styles.inputForNumber} />
-                        <button className={styles.buttonForSendNumber}>Send</button>
-                    </div>
                 </div>
                 <div className={styles.contactAndMapSubWrapper}>
                     <div className={styles.mapouter}>

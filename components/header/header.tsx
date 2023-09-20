@@ -1,3 +1,5 @@
+"use client"
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -5,8 +7,25 @@ import padcLogo from '../../assets/padc_logo.svg'
 import styles from './header.module.css'
 
 export default function Header() {
+
+    const [showFixedHidden, setShowFixedHidden] = useState<boolean>(false)
+
+    const handleScroll = () => {
+        if(window.scrollY >= 500) {
+            setShowFixedHidden(true)
+        } else {
+            setShowFixedHidden(false)
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${showFixedHidden ? styles.scrolledHeader : null}`}>
             <div className={`${styles.subHeader} container`}>
                 <div className={styles.logoAndNavigateWrapper}>
                     <div>

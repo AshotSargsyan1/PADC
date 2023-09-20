@@ -71,7 +71,7 @@ export function Request() {
             <div className={styles.contentDiv}>
                 <p className={styles.content}>Let's Meet… Coffee Is On Us :&#41;</p>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                 <div className={styles.inputsWrapper}>
                     <div className={styles.inputLine}>
                         <Controller

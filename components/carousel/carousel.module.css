@@ -23,8 +23,8 @@
     height: 430px;
     width: 45%;
     display: flex;
-    justify-content: center;
-    align-items: flex-end
+    justify-content: flex-end;
+    align-items: center
 }
 
 .subTitle {

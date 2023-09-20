@@ -22,7 +22,7 @@ export default function Carousel() {
                             </div>
                         </div>
                         <div className={styles.slideImgDiv}>
-                            <Image src={slideImage} height={350} width={430} alt="slider image" />
+                            <Image src={slideImage} height={380} width={510} alt="slider image" />
                         </div>
                     </div>
                 </div>

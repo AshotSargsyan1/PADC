@@ -4,12 +4,20 @@
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 10px;
+    transition: all 0.9s ease;
+    position: relative;
+    top: -100%;
 }
 
-.subHeader {
-    margin-top: 10px;
-    margin-bottom: 60px;
+.header.scrolledHeader {
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.91);
+    margin-bottom: 0;
+    top: 0;
 }
 
 .navigate {
