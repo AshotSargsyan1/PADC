@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <HeaderContent />
-      <main className={styles.main}>
+      <main>
         <OurProjects />
         <WhatWeDo />
         <OurServices />

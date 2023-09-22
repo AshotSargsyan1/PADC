@@ -1,0 +1,60 @@
+.trainingContentWrapper {
+    display: flex;
+}
+
+.contentChunk {
+    width: 50%;
+}
+
+.title {
+    font-size: 32px;
+    color: #223150;
+    letter-spacing: -.4px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hr {
+    height: 5px;
+    width: 75px;
+    margin-bottom: 50px;
+    background: #00c4e0;
+    transition: width .5s ease;
+    border: none;
+}
+
+.hr:hover {
+    width: 150px;
+}
+
+.description > ul {
+    list-style-type: none;
+}
+
+.description > p {
+    font-weight: 400;
+    margin: 15px 0;
+    line-height: 24px;
+}
+
+.description * li{
+    line-height: 24px;
+}
+
+.dateAndLocation{
+    color: #223150;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.dateAndLocationData{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.imageAndAboutWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

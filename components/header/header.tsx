@@ -2,18 +2,15 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 import padcLogo from '../../assets/padc_logo.svg'
 import styles from './header.module.css'
 
 export default function Header() {
-
     const [showFixedHidden, setShowFixedHidden] = useState<boolean>(false)
-    const router = useRouter()
 
     const handleScroll = (): void => {
-        if (window.scrollY >= 500) {
+        if (window.scrollY > 500) {
             setShowFixedHidden(true)
         } else {
             setShowFixedHidden(false)
