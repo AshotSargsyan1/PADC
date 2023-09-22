@@ -63,6 +63,10 @@
     cursor: pointer;
 }
 
+.showMore{
+    font-weight: 600;
+}
+
 .showMoreDiv:hover .showMore {
     text-decoration: underline;
 }

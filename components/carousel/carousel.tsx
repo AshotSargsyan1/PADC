@@ -20,7 +20,7 @@ export default function Carousel() {
                             </div>
                         </div>
                         <div className={styles.slideImgDiv}>
-                            <Image src={slideImage} height={380} width={510} alt="slider image" priority />
+                            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/padc-header-img.svg`} height={550} width={520} alt="slider image" priority />
                         </div>
                     </div>
                 </div>
