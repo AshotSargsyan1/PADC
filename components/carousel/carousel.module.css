@@ -16,7 +16,7 @@
 
 .slideContent {
     height: 430px;
-    width: 55%;
+    width: 50%;
 }
 
 .slideContent2 {
@@ -24,11 +24,11 @@
 }
 
 .slideImgDiv {
-    height: 430px;
-    width: 45%;
+    height: 510px;
+    width: 50%;
     display: flex;
     justify-content: flex-end;
-    align-items: center
+    align-items: flex-end;
 }
 
 .subTitle {
