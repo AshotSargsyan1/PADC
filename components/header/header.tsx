@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import padcLogo from '../../assets/padc_logo.svg'
 import styles from './header.module.css'
 
 export default function Header() {
@@ -29,7 +28,7 @@ export default function Header() {
                 <div className={styles.logoAndNavigateWrapper}>
                     <div>
                         <Link href='/'>
-                            <Image src={padcLogo} width={175} height={60} alt='PADC logo' />
+                            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/padc-logo.svg`} width={175} height={60} alt='PADC logo' priority/>
                         </Link>
                     </div>
                     <div className={styles.navigate}>

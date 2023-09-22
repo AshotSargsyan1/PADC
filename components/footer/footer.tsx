@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import padcLogo from '../../assets/padc_logo.svg'
 import facebook from '../../assets/facebook.svg'
 import instagram from '../../assets/instagram.svg'
 import twitter from '../../assets/twitter.svg'
@@ -16,7 +15,7 @@ export function Footer() {
                 <div className={styles.logoDiv}>
                     <div className={styles.padcLogoDiv}>
                         <Link href='/'>
-                            <Image src={padcLogo} height={60} width={176} alt='padc footer logo' />
+                            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/padc-logo.svg`} height={60} width={176} alt='padc footer logo' />
                         </Link>
                     </div>
                     <div className={styles.logosWrapper}>

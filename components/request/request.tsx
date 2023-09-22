@@ -65,7 +65,7 @@ export function Request() {
     }
 
     return (
-        <div className={styles.contentWrapper}>
+        <div className={styles.contentWrapper} id="request">
             <div className={styles.titleDiv}>
                 <h2 className={styles.title}><span className={styles.selectedWordInTitle}>JOIN</span> US</h2>
                 <hr className={styles.hr2} />
