@@ -10,9 +10,7 @@ import OurProjects from "@/components/ourprojects/ourprojects";
 import { HeaderContent } from "@/components/headercontent/headercontent";
 import { generateMetadataPerPage } from "@/helpers/metadata";
 
-import styles from './page.module.css'
-
-export const metadata: Metadata = generateMetadataPerPage('PADC - Home')
+export const metadata: Metadata = generateMetadataPerPage('Home - PADC LLC')
 
 export default function Home() {
   return (

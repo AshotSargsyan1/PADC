@@ -5,7 +5,7 @@ import { HeaderContent } from "@/components/headercontent/headercontent";
 import JobAdvertisment from "@/components/jobadvertisement/jobadvertisment";
 import { Request } from "@/components/request/request";
 
-export const metadata: Metadata = generateMetadataPerPage('PADC - Career')
+export const metadata: Metadata = generateMetadataPerPage('Career - PADC LLC')
 
 export default function Career() {
 

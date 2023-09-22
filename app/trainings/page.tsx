@@ -8,7 +8,7 @@ import { generateMetadataPerPage } from "@/helpers/metadata";
 import styles from './page.module.css'
 import { ITraining, ITrainingData } from "@/models/interfaces/trainings";
 
-export const metadata: Metadata = generateMetadataPerPage('PADC - Trainings')
+export const metadata: Metadata = generateMetadataPerPage('Trainings - PADC LLC')
 
 export function getProjects(): Promise<ITraining> {
     return fetch('https://api.padcllc.com/trainings', { next: { revalidate: 150 } }).then(res => res.json())

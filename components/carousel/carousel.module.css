@@ -6,6 +6,10 @@
     position: relative
 }
 
+.slider {
+    width: 56%;
+}
+
 .mainDiv {
     height: 430px;
 }
@@ -63,7 +67,6 @@
 }
 
 .contentDiv {
-    width: 660px;
     height: 195px;
     margin-bottom: 16px;
 }
@@ -166,4 +169,18 @@
 
 .selectedWordInTitle {
     color: #00c2df;
+}
+
+.hr {
+    height: 5px;
+    width: 85px;
+    margin: 20px 0;
+    background: #00c2df;
+    opacity: .3;
+    transition: width .5s ease;
+    border: none;
+}
+
+.technologiesDiv {
+    margin-bottom: 150px;
 }

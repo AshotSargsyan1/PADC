@@ -1,5 +1,6 @@
 import { FC } from "react"
 import Image from "next/image"
+import { notFound } from 'next/navigation'
 import { Metadata } from "next"
 
 import { HeaderContent } from "@/components/headercontent/headercontent"
@@ -8,16 +9,12 @@ import { Contact } from "@/components/contact/contact"
 import { ISingleTraining, ISingleTrainingProps, ITrainingData } from "@/models/interfaces/trainings"
 import styles from './page.module.css'
 
-export async function generateMetadata({ params: { id } }: ISingleTrainingProps) {
-    const singleTrainingData: Promise<ITrainingData> | undefined = await fetch(`https://api.padcllc.com/trainings/${id}`, { cache: 'no-store' })
-        .then(res => res.json())
-        .catch(_ => alert('Something went wrong!!!'))
+export async function generateMetadata({ params: { id } }: ISingleTrainingProps): Promise<Metadata> {
+    const singleTrainingData: ISingleTraining = await getSingleTraining(id)
 
-    if (singleTrainingData) {
-        return {
-            title: (await singleTrainingData).name,
-            description: (await singleTrainingData).description
-        }
+    return {
+        title: `${singleTrainingData.data?.name} - PADC LLC`,
+        description: `PADC LLC will do training - ${singleTrainingData.data?.name}`
     }
 }
 
@@ -30,6 +27,10 @@ export function getSingleTraining(id: string): Promise<ISingleTraining> {
 const SingleTraining: FC<ISingleTrainingProps> = async ({ params: { id } }) => {
 
     const singleTraining = await getSingleTraining(id)
+
+    if (!singleTraining.data) {
+        return notFound()
+    }
 
     return (
         <>

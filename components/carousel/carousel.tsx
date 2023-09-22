@@ -20,7 +20,7 @@ export default function Carousel() {
                             </div>
                         </div>
                         <div className={styles.slideImgDiv}>
-                            <Image src={slideImage} height={380} width={510} alt="slider image" priority/>
+                            <Image src={slideImage} height={380} width={510} alt="slider image" priority />
                         </div>
                     </div>
                 </div>
@@ -44,12 +44,15 @@ export const Carousel2 = ({ projectsData }: any) => {
         <div className={`${styles.sliderWrapper2} container`}>
             <Slider className={styles.slider} {...settings}>
                 {!!projectsData?.data?.length && projectsData.data.map((data: any) => {
+                    const [content, technologies] = data.description.split('<hr>')
                     return (
                         <div key={data.id}>
                             <div className={styles.slideContent2}>
                                 <h3 className={styles.title2}>{data.title}</h3>
                                 <div className={styles.contentDiv}>
-                                    <p className={styles.content2}>{data.description}</p>
+                                    <p className={styles.content2}>{content}</p>
+                                    <hr className={styles.hr} />
+                                    <div dangerouslySetInnerHTML={{ __html: technologies }} className={styles.technologiesDiv}/>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +82,7 @@ export const Carousel3 = (team: any) => {
                         <div className={styles.cardWrapper}>
                             <figure className={styles.cardInfo}>
                                 <div className={styles.darkDivOnCard}></div>
-                                <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/team/${employee.image}`} width={500} height={570} alt='card image' className={styles.cardImg} priority/>
+                                <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/team/${employee.image}`} width={500} height={570} alt='card image' className={styles.cardImg} priority />
                                 <figcaption>
                                     <h3 className={styles.nameAndSurename}>{employee.name}</h3>
                                     <div className={styles.profession}>
