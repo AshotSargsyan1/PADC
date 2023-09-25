@@ -6,8 +6,9 @@ import { Metadata } from "next"
 import { HeaderContent } from "@/components/headercontent/headercontent"
 import { Request } from "@/components/request/request"
 import { Contact } from "@/components/contact/contact"
-import { ISingleTraining, ISingleTrainingProps, ITrainingData } from "@/models/interfaces/trainings"
+import { ISingleTraining, ISingleTrainingProps } from "@/models/interfaces/trainings"
 import styles from './page.module.css'
+import { HeaderContentFrom } from "@/models/enums/headercontent"
 
 export async function generateMetadata({ params: { id } }: ISingleTrainingProps): Promise<Metadata> {
     const singleTrainingData: ISingleTraining = await getSingleTraining(id)
@@ -34,7 +35,7 @@ const SingleTraining: FC<ISingleTrainingProps> = async ({ params: { id } }) => {
 
     return (
         <>
-            <HeaderContent forAllTrainings={true} />
+            <HeaderContent from={HeaderContentFrom.SINGLETRAINING} trainingName={singleTraining.data.name} />
             <div className={`${styles.trainingContentWrapper} container`}>
                 <div className={styles.contentChunk}>
                     <div>

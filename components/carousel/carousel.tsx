@@ -2,33 +2,8 @@
 import Image from 'next/image';
 import Slider from 'react-slick';
 
-import slideImage from '../../assets/slideimg.png'
-import styles from './carousel.module.css'
+import styles from './carousel.module.css';
 import { ISliderSettings } from '@/models/interfaces/carousel';
-
-export default function Carousel() {
-    return (
-        <div className={`${styles.sliderWrapper} container`}>
-            <div className={styles.mainDiv} >
-                <div>
-                    <div className={styles.slideContentWrapper}>
-                        <div className={styles.slideContent}>
-                            <p className={styles.subTitle}>Get the web's modern capabilities</p>
-                            <h2 className={styles.title}>We Design. We Develop. We <span className={styles.selectedWordInTitle}>Inspire.</span></h2>
-                            <div className={styles.contentDiv}>
-                                <p className={styles.content}>Get the web's modern capabilities on your own sites and apps with useful guidance and analysis from padcllc.com.</p>
-                            </div>
-                        </div>
-                        <div className={styles.slideImgDiv}>
-                            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/padc-header-img.svg`} height={430} width={550} alt="slider image" priority />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
-
 
 export const Carousel2 = ({ projectsData }: any) => {
     const settings: ISliderSettings = {
@@ -52,7 +27,7 @@ export const Carousel2 = ({ projectsData }: any) => {
                                 <div className={styles.contentDiv}>
                                     <p className={styles.content2}>{content}</p>
                                     <hr className={styles.hr} />
-                                    <div dangerouslySetInnerHTML={{ __html: technologies }} className={styles.technologiesDiv}/>
+                                    <div dangerouslySetInnerHTML={{ __html: technologies }} className={styles.technologiesDiv} />
                                 </div>
                             </div>
                         </div>

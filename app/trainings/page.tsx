@@ -7,6 +7,7 @@ import { HeaderContent } from "@/components/headercontent/headercontent";
 import { generateMetadataPerPage } from "@/helpers/metadata";
 import styles from './page.module.css'
 import { ITraining, ITrainingData } from "@/models/interfaces/trainings";
+import { HeaderContentFrom } from "@/models/enums/headercontent";
 
 export const metadata: Metadata = generateMetadataPerPage('Trainings - PADC LLC')
 
@@ -20,7 +21,7 @@ export default async function Trainings() {
 
     return (
         <>
-            <HeaderContent forAllTrainings={true} />
+            <HeaderContent from={HeaderContentFrom.ALLTRAININGS}/>
             <main>
                 <div className={`${styles.announcementsWrapper} container`}>
                     {!!trainings.data && trainings.data.map((training: ITrainingData) => {

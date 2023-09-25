@@ -5,6 +5,7 @@ import { HeaderContent } from "@/components/headercontent/headercontent";
 import JobAdvertisment from "@/components/jobadvertisement/jobadvertisment";
 import { Request } from "@/components/request/request";
 import { ICareers, ISingleCareer } from "@/models/interfaces/career";
+import { HeaderContentFrom } from "@/models/enums/headercontent";
 
 export const metadata: Metadata = generateMetadataPerPage('Career - PADC LLC')
 
@@ -18,7 +19,7 @@ export default async function Career() {
 
     return (
         <>
-            <HeaderContent forCareer={true} />
+            <HeaderContent from={HeaderContentFrom.CAREER} />
             {!!vacancies.data && vacancies.data.map((vacancie: ISingleCareer) => {
                 return <JobAdvertisment {...vacancie} />
             })}

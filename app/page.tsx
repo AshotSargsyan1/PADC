@@ -9,13 +9,14 @@ import { Contact } from "@/components/contact/contact";
 import OurProjects from "@/components/ourprojects/ourprojects";
 import { HeaderContent } from "@/components/headercontent/headercontent";
 import { generateMetadataPerPage } from "@/helpers/metadata";
+import { HeaderContentFrom } from "@/models/enums/headercontent";
 
 export const metadata: Metadata = generateMetadataPerPage('Home - PADC LLC')
 
 export default function Home() {
   return (
     <>
-      <HeaderContent />
+      <HeaderContent from={HeaderContentFrom.HOME}/>
       <main>
         <OurProjects />
         <WhatWeDo />
