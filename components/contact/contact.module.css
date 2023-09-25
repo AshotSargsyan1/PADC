@@ -4,11 +4,6 @@
 }
 
 .title {
-    color: #002B43;
-    font-size: 28px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: normal;
     margin-bottom: 33px;
 }
 
@@ -74,9 +69,6 @@
 
 .contactInfo {
     color: #000;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: normal;
     margin-bottom: 30px;
 }

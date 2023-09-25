@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Slider from 'react-slick';
 
-import styles from './carousel.module.css';
+import styles from './carousel.module.css'
 import { ISliderSettings } from '@/models/interfaces/carousel';
 
 export const Carousel2 = ({ projectsData }: any) => {
@@ -25,9 +25,9 @@ export const Carousel2 = ({ projectsData }: any) => {
                             <div className={styles.slideContent2}>
                                 <h3 className={styles.title2}>{data.title}</h3>
                                 <div className={styles.contentDiv}>
-                                    <p className={styles.content2}>{content}</p>
+                                    <p>{content}</p>
                                     <hr className={styles.hr} />
-                                    <div dangerouslySetInnerHTML={{ __html: technologies }} className={styles.technologiesDiv} />
+                                    <div dangerouslySetInnerHTML={{ __html: technologies }} className={styles.technologiesDiv}/>
                                 </div>
                             </div>
                         </div>

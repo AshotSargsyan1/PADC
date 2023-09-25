@@ -16,6 +16,14 @@
     height: 100%;
 }
 
+.slideImgDiv {
+    height: 510px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
 .title {
     color: #223150;
     font-size: 52px;
@@ -114,10 +122,9 @@
 }
 
 .professionP {
-    color: black;
-    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
     letter-spacing: 2px;
-
 }
 
 .darkDivOnCard,
@@ -127,7 +134,7 @@
 }
 
 .cardWrapper:hover * .profession {
-    bottom: 60px;
+    bottom: 50px;
 }
 
 .cardWrapper:hover * .darkDivOnCard {
@@ -137,7 +144,6 @@
 .cardWrapper:hover * .cardImg {
     transform: translate3d(0, 0, 0);
 }
-
 
 .hr {
     height: 5px;

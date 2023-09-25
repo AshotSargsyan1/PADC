@@ -17,7 +17,7 @@ export default async function OurProjects() {
     return (
         <div className={`${styles.contentWrapper}`} id='projects'>
             <div>
-                <h3 className={styles.title}>OUR PROJECTS</h3>
+                <h2 className={styles.title}>OUR PROJECTS</h2>
                 <hr className={styles.hr} />
                 <Carousel2 projectsData={projects} />
             </div>

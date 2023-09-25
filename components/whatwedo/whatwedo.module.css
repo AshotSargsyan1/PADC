@@ -11,15 +11,6 @@
     margin-bottom: 85px;
 }
 
-.title {
-    color: #002B43;
-    font-size: 28px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: normal;
-    margin-bottom: 12px;
-}
-
 .hr {
     width: 95px;
     height: 5px;
@@ -39,14 +30,11 @@
 }
 
 .circle {
-    width: 333px;
-    height: 333px;
-    /* width = 2* height */
-    border: 5px dashed deepskyblue;
-    /* border-radius = height + border */
-    border-radius: 0 0 333px 333px;
-    border-top: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 280px;
+    height: 265px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: relative;
+    padding: 20%;
+    border: 4px dashed #cdcdcd;
 }

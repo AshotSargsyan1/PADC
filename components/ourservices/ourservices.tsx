@@ -5,7 +5,7 @@ export function OurServices() {
     return (
         <div className={`${styles.contentWrapper} container`} id='services'>
             <div>
-                <h2 className={styles.title}>OUR SERVICES</h2>
+                <h2>OUR SERVICES</h2>
                 <hr className={styles.hr} />
             </div>
             <div className={styles.ourServicesWrapper}>

@@ -21,7 +21,7 @@ export default async function Trainings() {
 
     return (
         <>
-            <HeaderContent from={HeaderContentFrom.ALLTRAININGS}/>
+            <HeaderContent from={HeaderContentFrom.ALLTRAININGS} />
             <main>
                 <div className={`${styles.announcementsWrapper} container`}>
                     {!!trainings.data && trainings.data.map((training: ITrainingData) => {
