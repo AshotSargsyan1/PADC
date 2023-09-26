@@ -106,29 +106,40 @@
     font-weight: 500;
 }
 
-
 @media screen and (max-width: 1170px) {
-    .imgDiv {
-        display: none;
+
+    .titleDiv,
+    .contentDiv {
+        width: 700px
     }
 
-    .homeHeaderContent {
-        width: 100%;
+    .partnersDiv>* {
+        width: 80px;
+        height: 40px;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+
+    .titleDiv,
+    .contentDiv {
+        width: 560px
+    }
+
+    .contentWrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
-    .title {
-        font-size: 32px;
+    .statistics {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
     }
 
-    .contentDiv {
-        width: 90%;
-        text-align: center;
-    }
-
-    .divForServices {
-        font-size: 14px;
+    .partnersDiv>* {
+        width: 60px;
+        height: 30px;
     }
 }

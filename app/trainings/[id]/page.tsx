@@ -46,11 +46,11 @@ const SingleTraining: FC<ISingleTrainingProps> = async ({ params: { id } }) => {
                 </div>
                 <div className={styles.contentChunk}>
                     <div className={styles.imageAndAboutWrapper}>
-                        <div>
+                        <div className={styles.aboutWrapper}>
                             <h2 className={styles.dateAndLocation}>Date: <span className={styles.dateAndLocationData}>{singleTraining.data.date}</span></h2>
                             <h2 className={styles.dateAndLocation}>Location: <span className={styles.dateAndLocationData}>Mher Mkrtchyan 47/1 3101 Gyumri, Armenia</span></h2>
                         </div>
-                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}${singleTraining.data.mediaFiles.path}`} height={315} width={545} alt={`${singleTraining.data.name} image`} />
+                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}${singleTraining.data.mediaFiles.path}`} height={315} width={545} alt={`${singleTraining.data.name} image`} className={styles.image}/>
                     </div>
 
                 </div>

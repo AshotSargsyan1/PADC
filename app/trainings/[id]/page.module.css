@@ -55,3 +55,34 @@
     flex-direction: column;
     align-items: center;
 }
+
+
+@media screen and (max-width: 1170px) {
+    .image {
+        width: 450px;
+        margin-left: 45px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .trainingContentWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentChunk {
+        width: 100%;
+    }
+
+    .dateAndLocation {
+        font-size: 20px;
+    }
+
+    .dateAndLocationData {
+        font-size: 20px;
+    }
+
+    .aboutWrapper {
+        margin-top: 20px;
+    }
+}

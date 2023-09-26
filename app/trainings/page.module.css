@@ -103,3 +103,10 @@
 .trainingName:last-child {
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 880px) {
+    .announcementsWrapper{
+        justify-content: center;
+    }
+}
+

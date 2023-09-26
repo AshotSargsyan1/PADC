@@ -134,3 +134,37 @@
     width: 100% !important;
     height: 100% !important;
 }
+
+
+@media screen and (max-width: 1170px) {
+    .inputForNumber {
+        width: 300px;
+    }
+
+    .mapouter {
+        height: 400px
+    }
+
+    .contactInfoFields{
+        margin-right: 10px;
+    }
+
+    .contactInfo {
+        margin-bottom: 20px;
+    }
+
+    .inputForNumber {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .contactAndMapWrapper{ 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactAndMapSubWrapper {
+        width: 100%;
+    }
+}

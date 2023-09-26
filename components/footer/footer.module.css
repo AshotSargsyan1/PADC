@@ -85,3 +85,43 @@
     margin-bottom: 16px;
     font-size: 16px;
 }
+
+
+@media screen and (max-width: 880px) {
+    .logoAndLinksWrapper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .navigationDiv{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigateLines{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logoDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navigateLines{
+        margin-top: 20px;
+        margin-right: 0px;
+        min-height: 120px;
+        min-width: 165px;
+        text-align: center;
+    }
+
+    .navigateLines:last-child {
+        margin-top: 0;
+    }
+
+}

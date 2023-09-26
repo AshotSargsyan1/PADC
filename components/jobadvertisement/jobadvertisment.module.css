@@ -79,5 +79,27 @@
 
 .vacancieDescription>p>strong {
     font-weight: 600;
+}
 
+@media screen and (max-width: 1170px) {
+    .previousData {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .title {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .titleAndContentWrapper {
+        width: 450px;
+    }
 }
