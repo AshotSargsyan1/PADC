@@ -1,10 +1,9 @@
 .contentWrapper {
-    height: 670px;
-    /*TODO:*/
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .titleDiv {
@@ -14,7 +13,6 @@
 .hr {
     width: 95px;
     height: 5px;
-    border: none;
     border-radius: 2px;
     background: #00A5C7;
     border: none;
@@ -27,14 +25,174 @@
 
 .whatWeDoStepsWrapper {
     display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.step {
+    height: 270px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .circle {
-    width: 280px;
-    height: 265px;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    height: 135px;
+    width: 100%;
+    border: 4px dashed lightgray;
     position: relative;
-    padding: 20%;
-    border: 4px dashed #cdcdcd;
+    transition: all .3s ease;
+}
+
+.step:nth-child(even) .circle {
+    border-radius: 139px 139px 0 0;
+    border-bottom: transparent;
+}
+
+.step:nth-child(odd) .circle {
+    border-radius: 0 0 139px 139px;
+    border-top: transparent;
+}
+
+.step:nth-child(2) .circle::after {
+    content: "";
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: 2px solid;
+    position: absolute;
+    right: -12px;
+    bottom: -3%;
+    background-color: white;
+    z-index: 100;
+}
+
+.step:nth-child(2) .circle::before {
+    content: "";
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: 2px solid;
+    position: absolute;
+    bottom: 0%;
+    left: -12px;
+    background-color: white;
+    z-index: 100;
+}
+
+.step:last-child .circle::before {
+    content: "";
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: 2px solid;
+    position: absolute;
+    bottom: 0%;
+    left: -12px;
+    background-color: white;
+    z-index: 100;
+}
+
+.step:last-child .circle::after {
+    content: "";
+    position: absolute;
+    left: 99%;
+    bottom: -8%;
+    z-index: 100;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid deepskyblue;
+}
+
+.step:first-child .circle::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    left: -3%;
+    top: -8%;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid deepskyblue;
+}
+
+.step:nth-child(even) {
+    display: flex;
+    align-items: flex-start;
+}
+
+.step:nth-child(odd) {
+    display: flex;
+    align-items: flex-end;
+}
+
+.step:nth-child(even) .logoWrapper {
+    height: 110px;
+    width: 110px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 29%;
+    top: 57%;
+    z-index: 120;
+}
+
+.step:nth-child(odd) .logoWrapper {
+    height: 110px;
+    width: 110px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 29%;
+    bottom: 57%;
+    z-index: 120;
+}
+
+.textContentWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.contentDiv {
+    height: 100%;
+    width: 25%;
+    padding: 15px;
+}
+
+.title {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.selectedWordInTitle {
+    color: #00A5C7;
+}
+
+.content {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.activeStep {
+    border: 4px dashed deepskyblue;
 }
