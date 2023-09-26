@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import MenuIcon from '@mui/icons-material/Menu';
 
 import styles from './header.module.css'
 
@@ -28,7 +29,7 @@ export default function Header() {
                 <div className={styles.logoAndNavigateWrapper}>
                     <div>
                         <Link href='/'>
-                            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/padc-logo.svg`} width={175} height={60} alt='PADC logo' priority/>
+                            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}assets/images/padc-logo.svg`} width={175} height={60} alt='PADC logo' priority />
                         </Link>
                     </div>
                     <div className={styles.navigate}>
@@ -41,6 +42,9 @@ export default function Header() {
                         <Link href='/#contact' className={styles.navText}>CONTACT</Link>
                         <Link href='/trainings' className={styles.navText}>TRAININGS</Link>
                         <Link href='/career' className={styles.navText}>CAREER</Link>
+                    </div>
+                    <div className={styles.burger}>
+                        <MenuIcon fontSize='large'/>
                     </div>
                 </div>
             </div>

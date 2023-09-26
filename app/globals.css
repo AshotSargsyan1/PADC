@@ -43,3 +43,17 @@ h2 {
   max-width: 1140px;
   min-width: 1140px
 }
+
+@media screen and (max-width: 1170px) {
+  .container {
+    max-width: 850px;
+    min-width: 850px
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container {
+    max-width: 550px;
+    min-width: 550px
+  }
+}

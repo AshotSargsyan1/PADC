@@ -5,7 +5,7 @@ import styles from './homeheadercontent.module.css'
 const HomeHeaderContent = () => {
     return (
         <div className={`${styles.mainWrapper} container`}>
-            <div className={styles.mainDiv} >
+            <div className={styles.mainDiv}>
                 <div>
                     <div className={styles.contentWrapper}>
                         <div className={styles.homeHeaderContent}>

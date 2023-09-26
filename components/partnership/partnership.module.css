@@ -105,3 +105,30 @@
 .statisticsSubTitle {
     font-weight: 500;
 }
+
+
+@media screen and (max-width: 1170px) {
+    .imgDiv {
+        display: none;
+    }
+
+    .homeHeaderContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .contentDiv {
+        width: 90%;
+        text-align: center;
+    }
+
+    .divForServices {
+        font-size: 14px;
+    }
+}

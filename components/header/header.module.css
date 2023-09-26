@@ -58,3 +58,17 @@
     background-color: rgba(0, 168, 201, 0.88);
     color: white;
 }
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    .navigate {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
