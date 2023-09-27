@@ -4,11 +4,13 @@
 }
 
 .sliderWrapper2 {
-    position: relative
+    width: 700px;
+    position: relative;
+    z-index: 200;
 }
 
 .slider {
-    width: 56%;
+    width: 90%;
 }
 
 .slideContent2 {
@@ -158,7 +160,26 @@
     margin-bottom: 150px;
 }
 
+@media screen and (max-width: 1170px) {
+    .sliderWrapper2 {
+        width: 800px;
+    }
+
+    .slideContent2 {
+        width: 100%;
+    }
+
+    .cardInfo {
+        width: 400px;
+        height: 350px;
+    }
+}
+
 @media screen and (max-width: 880px) {
+    .sliderWrapper2 {
+        width: 600px;
+    }
+
     .cardInfo {
         width: 400px;
         height: 350px;

@@ -15,38 +15,23 @@ export function WhatWeDo() {
     const thirdCircle = useRef<HTMLDivElement>(null)
     const fourthCircle = useRef<HTMLDivElement>(null)
 
-    const handleMouseEnter = (elementIndex: number) => {
-        if (firstCircle.current && secondCircle.current && thirdCircle.current && fourthCircle.current) {
-            switch (elementIndex) {
-                case 1:
-                    firstCircle.current.classList.add(styles.activeStep);
-                    break;
-                case 2:
-                    firstCircle.current.classList.add(styles.activeStep);
-                    secondCircle.current.classList.add(styles.activeStep);
-                    break;
-                case 3:
-                    firstCircle.current.classList.add(styles.activeStep);
-                    secondCircle.current.classList.add(styles.activeStep);
-                    thirdCircle.current.classList.add(styles.activeStep);
-                    break;
-                case 4:
-                    firstCircle.current.classList.add(styles.activeStep);
-                    secondCircle.current.classList.add(styles.activeStep);
-                    thirdCircle.current.classList.add(styles.activeStep);
-                    fourthCircle.current.classList.add(styles.activeStep);
-                    break;
-            };
+    const handleMouseInteraction = (elementIndex: number, isMouseEnter: boolean) => {
+        const circles = [firstCircle, secondCircle, thirdCircle, fourthCircle].slice(0, elementIndex);
+
+        for (const circle of circles) {
+            if (circle.current) {
+                const method = isMouseEnter ? 'add' : 'remove';
+                circle.current.classList[method](styles.activeStep);
+            }
         }
-    }
+    };
+
+    const handleMouseEnter = (elementIndex: number) => {
+        handleMouseInteraction(elementIndex, true);
+    };
 
     const handleMouseLeave = (elementIndex: number) => {
-        if (firstCircle.current && secondCircle.current && thirdCircle.current && fourthCircle.current) {
-            firstCircle.current.classList.remove(styles.activeStep);
-            secondCircle.current.classList.remove(styles.activeStep);
-            thirdCircle.current.classList.remove(styles.activeStep);
-            fourthCircle.current.classList.remove(styles.activeStep);
-        }
+        handleMouseInteraction(elementIndex, false);
     };
 
     return (
@@ -56,34 +41,40 @@ export function WhatWeDo() {
                 <hr className={styles.hr} />
             </div>
             <div className={styles.whatWeDoStepsWrapper}>
-                <div className={styles.step}>
+                <div
+                    className={styles.step}
+                    onMouseEnter={() => handleMouseEnter(1)}
+                    onMouseLeave={() => handleMouseLeave(1)}
+                >
                     <div
                         className={styles.circle}
                         ref={firstCircle}
-                        onMouseEnter={() => handleMouseEnter(1)}
-                        onMouseLeave={() => handleMouseLeave(1)}>
+                    >
                         <div className={styles.logoWrapper}>
                             <Image src={keyword} width={65} height={65} alt="what we do logo" />
                         </div>
                     </div>
                 </div>
-                <div className={styles.step}>
+                <div
+                    className={styles.step}
+                    onMouseEnter={() => handleMouseEnter(2)}
+                    onMouseLeave={() => handleMouseLeave(2)}>
                     <div
                         className={styles.circle}
                         ref={secondCircle}
-                        onMouseEnter={() => handleMouseEnter(2)}
-                        onMouseLeave={() => handleMouseLeave(2)}
                     >
                         <div className={styles.logoWrapper}>
                             <Image src={webdesign} width={65} height={65} alt="what we do logo" />
                         </div>
                     </div>
                 </div>
-                <div className={styles.step}>
+                <div
+                    className={styles.step}
+                    onMouseEnter={() => handleMouseEnter(3)}
+                    onMouseLeave={() => handleMouseLeave(3)}
+                >
                     <div
                         className={styles.circle}
-                        onMouseEnter={() => handleMouseEnter(3)}
-                        onMouseLeave={() => handleMouseLeave(3)}
                         ref={thirdCircle}
                     >
                         <div className={styles.logoWrapper}>
@@ -92,12 +83,14 @@ export function WhatWeDo() {
                     </div>
 
                 </div>
-                <div className={styles.step}>
+                <div
+                    className={styles.step}
+                    onMouseEnter={() => handleMouseEnter(4)}
+                    onMouseLeave={() => handleMouseLeave(4)}
+                >
                     <div
                         ref={fourthCircle}
                         className={styles.circle}
-                        onMouseEnter={() => handleMouseEnter(4)}
-                        onMouseLeave={() => handleMouseLeave(4)}
                     >
                         <div className={styles.logoWrapper}>
                             <Image src={coding} width={65} height={65} alt="what we do logo" />

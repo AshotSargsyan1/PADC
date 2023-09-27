@@ -132,7 +132,7 @@
     align-items: flex-end;
 }
 
-.step:nth-child(even) .logoWrapper {
+.logoWrapper {
     height: 110px;
     width: 110px;
     border: 2px solid;
@@ -142,22 +142,15 @@
     align-items: center;
     position: absolute;
     left: 29%;
-    top: 57%;
     z-index: 120;
 }
 
+.step:nth-child(even) .logoWrapper {
+    top: 57%;
+}
+
 .step:nth-child(odd) .logoWrapper {
-    height: 110px;
-    width: 110px;
-    border: 2px solid;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 29%;
     bottom: 57%;
-    z-index: 120;
 }
 
 .textContentWrapper {
@@ -195,4 +188,28 @@
 
 .activeStep {
     border: 4px dashed deepskyblue;
+}
+
+
+@media screen and (max-width: 1170px) {
+    .logoWrapper {
+        left: 24%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .logoWrapper {
+        height: 90px;
+        width: 90px;
+        left: 18%;
+    }
+
+    .textContentWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentDiv {
+        width: 100%;
+    }
 }

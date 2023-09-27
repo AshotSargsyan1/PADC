@@ -17,7 +17,7 @@ export const Carousel2 = ({ projectsData }: any) => {
     };
 
     return (
-        <div className={`${styles.sliderWrapper2} container`}>
+        <div className={`${styles.sliderWrapper2}`}>
             <Slider className={styles.slider} {...settings}>
                 {!!projectsData?.data?.length && projectsData.data.map((data: any) => {
                     const [content, technologies] = data.description.split('<hr>')
