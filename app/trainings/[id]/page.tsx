@@ -22,7 +22,6 @@ export async function generateMetadata({ params: { id } }: ISingleTrainingProps)
 export function getSingleTraining(id: string): Promise<ISingleTraining> {
     return fetch(`https://api.padcllc.com/trainings/${id}`, { cache: 'no-store' })
         .then(res => res.json())
-        .catch(_ => alert("Something went wrong!!!"))
 }
 
 const SingleTraining: FC<ISingleTrainingProps> = async ({ params: { id } }) => {

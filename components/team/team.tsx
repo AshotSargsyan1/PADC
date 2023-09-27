@@ -4,7 +4,6 @@ import styles from './team.module.css'
 export function getTeamData() {
     return fetch('https://padcllc.com/assets/data/team.json', { next: { revalidate: 150 } })
         .then(res => res.json())
-        .catch(_ => alert("Something went wrong!"))
 }
 
 export async function Team() {

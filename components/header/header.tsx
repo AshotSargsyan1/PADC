@@ -6,15 +6,33 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import styles from './header.module.css'
 import { SwipeableDrawer } from '@mui/material';
+import { usePathname } from 'next/navigation';
 
 
 export default function Header() {
 
+    const [currentHash, setCurrentHash] = useState<string>('/');
     const [showFixedHidden, setShowFixedHidden] = useState<boolean>(false)
 
     const [state, setState] = useState({
         right: false,
     });
+
+    function allLinks() {
+        return (
+            <>
+                <Link onClick={() => { setCurrentHash('/') }} href='/' className={`${styles.navText}  ${currentHash === '/' ? styles.activeTab : undefined}`}>HOME</Link>
+                <Link onClick={() => { setCurrentHash('/#projects') }} href='/#projects' className={`${styles.navText}  ${currentHash === '/#projects' ? styles.activeTab : undefined}`}>PROJECTS</Link>
+                <Link onClick={() => { setCurrentHash('/#whatwedo') }} href='/#whatwedo' className={`${styles.navText}  ${currentHash === '/#whatwedo' ? styles.activeTab : undefined}`}>WHAT WE DO</Link>
+                <Link onClick={() => { setCurrentHash('/#services') }} href='/#services' className={`${styles.navText}  ${currentHash === '/#services' ? styles.activeTab : undefined}`}>SERVICES</Link>
+                <Link onClick={() => { setCurrentHash('/#partners') }} href='/#partners' className={`${styles.navText}  ${currentHash === '/#partners' ? styles.activeTab : undefined}`}>PARTNERS</Link>
+                <Link onClick={() => { setCurrentHash('/#team') }} href='/#team' className={`${styles.navText}  ${currentHash === '/#team' ? styles.activeTab : undefined}`}>TEAM</Link>
+                <Link onClick={() => { setCurrentHash('/#contact') }} href='/#contact' className={`${styles.navText}  ${currentHash === '/#contact' ? styles.activeTab : undefined}`}>CONTACT</Link>
+                <Link onClick={() => { setCurrentHash('/trainings') }} href='/trainings' className={`${styles.navText}  ${currentHash === '/trainings' ? styles.activeTab : undefined}`}>TRAININGS</Link>
+                <Link onClick={() => { setCurrentHash('/career') }} href='/career' className={`${styles.navText}  ${currentHash === '/career' ? styles.activeTab : undefined}`}>CAREER</Link>
+            </>
+        )
+    }
 
     const toggleDrawer = (anchor: 'right', open: boolean) =>
         (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -54,15 +72,7 @@ export default function Header() {
                         </Link>
                     </div>
                     <div className={styles.navigate}>
-                        <Link href='/' className={styles.navText}>HOME</Link>
-                        <Link href='/#projects' className={styles.navText}>PROJECTS</Link>
-                        <Link href='/#whatwedo' className={styles.navText}>WHAT WE DO</Link>
-                        <Link href='/#services' className={styles.navText}>SERVICES</Link>
-                        <Link href='/#partners' className={styles.navText}>PARTNERS</Link>
-                        <Link href='/#team' className={styles.navText}>TEAM</Link>
-                        <Link href='/#contact' className={styles.navText}>CONTACT</Link>
-                        <Link href='/trainings' className={styles.navText}>TRAININGS</Link>
-                        <Link href='/career' className={styles.navText}>CAREER</Link>
+                        {allLinks()}
                     </div>
                     <div className={styles.burger}>
                         <div>
@@ -75,15 +85,9 @@ export default function Header() {
                                         onClose={toggleDrawer(anchor, false)}
                                         onOpen={toggleDrawer(anchor, true)}
                                     >
-                                        <Link href='/' className={styles.navText}>HOME</Link>
-                                        <Link href='/#projects' className={styles.navText}>PROJECTS</Link>
-                                        <Link href='/#whatwedo' className={styles.navText}>WHAT WE DO</Link>
-                                        <Link href='/#services' className={styles.navText}>SERVICES</Link>
-                                        <Link href='/#partners' className={styles.navText}>PARTNERS</Link>
-                                        <Link href='/#team' className={styles.navText}>TEAM</Link>
-                                        <Link href='/#contact' className={styles.navText}>CONTACT</Link>
-                                        <Link href='/trainings' className={styles.navText}>TRAININGS</Link>
-                                        <Link href='/career' className={styles.navText}>CAREER</Link>
+                                        <div>
+                                            {allLinks()}
+                                        </div>
                                     </SwipeableDrawer>
                                 </div>
                             ))}
@@ -91,6 +95,6 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-        </header>
+        </header >
     )
 }

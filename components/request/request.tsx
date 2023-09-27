@@ -49,7 +49,6 @@ export function Request() {
                     })
                 }
             })
-            .catch(_ => alert("Something went wrong!"))
             .finally(() => {
                 setIsSending(false)
             });
