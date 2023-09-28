@@ -3,11 +3,9 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import MenuIcon from '@mui/icons-material/Menu';
+import { SwipeableDrawer } from '@mui/material';
 
 import styles from './header.module.css'
-import { SwipeableDrawer } from '@mui/material';
-import { usePathname } from 'next/navigation';
-
 
 export default function Header() {
 
@@ -18,21 +16,30 @@ export default function Header() {
         right: false,
     });
 
-    function allLinks() {
-        return (
-            <>
-                <Link onClick={() => { setCurrentHash('/') }} href='/' className={`${styles.navText}  ${currentHash === '/' ? styles.activeTab : undefined}`}>HOME</Link>
-                <Link onClick={() => { setCurrentHash('/#projects') }} href='/#projects' className={`${styles.navText}  ${currentHash === '/#projects' ? styles.activeTab : undefined}`}>PROJECTS</Link>
-                <Link onClick={() => { setCurrentHash('/#whatwedo') }} href='/#whatwedo' className={`${styles.navText}  ${currentHash === '/#whatwedo' ? styles.activeTab : undefined}`}>WHAT WE DO</Link>
-                <Link onClick={() => { setCurrentHash('/#services') }} href='/#services' className={`${styles.navText}  ${currentHash === '/#services' ? styles.activeTab : undefined}`}>SERVICES</Link>
-                <Link onClick={() => { setCurrentHash('/#partners') }} href='/#partners' className={`${styles.navText}  ${currentHash === '/#partners' ? styles.activeTab : undefined}`}>PARTNERS</Link>
-                <Link onClick={() => { setCurrentHash('/#team') }} href='/#team' className={`${styles.navText}  ${currentHash === '/#team' ? styles.activeTab : undefined}`}>TEAM</Link>
-                <Link onClick={() => { setCurrentHash('/#contact') }} href='/#contact' className={`${styles.navText}  ${currentHash === '/#contact' ? styles.activeTab : undefined}`}>CONTACT</Link>
-                <Link onClick={() => { setCurrentHash('/trainings') }} href='/trainings' className={`${styles.navText}  ${currentHash === '/trainings' ? styles.activeTab : undefined}`}>TRAININGS</Link>
-                <Link onClick={() => { setCurrentHash('/career') }} href='/career' className={`${styles.navText}  ${currentHash === '/career' ? styles.activeTab : undefined}`}>CAREER</Link>
-            </>
-        )
-    }
+    const navItems = [
+        { hash: '/', text: 'HOME' },
+        { hash: '/#projects', text: 'PROJECTS' },
+        { hash: '/#whatwedo', text: 'WHAT WE DO' },
+        { hash: '/#services', text: 'SERVICES' },
+        { hash: '/#partners', text: 'PARTNERS' },
+        { hash: '/#team', text: 'TEAM' },
+        { hash: '/#contact', text: 'CONTACT' },
+        { hash: '/trainings', text: 'TRAININGS' },
+        { hash: '/career', text: 'CAREER' }
+    ];
+
+    const allLinks = () => {
+        return navItems.map(item => (
+            <Link
+                key={item.text}
+                onClick={() => setCurrentHash(item.hash)}
+                href={item.hash}
+                className={`${styles.navText} ${currentHash === item.hash ? styles.activeTab : undefined}`}
+            >
+                {item.text}
+            </Link>
+        ));
+    };
 
     const toggleDrawer = (anchor: 'right', open: boolean) =>
         (event: React.KeyboardEvent | React.MouseEvent) => {

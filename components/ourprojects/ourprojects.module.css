@@ -1,7 +1,7 @@
 .contentWrapper {
+    padding-top: 120px;
     position: relative;
     display: flex;
-    margin-bottom: 120px;
 }
 
 .title {
