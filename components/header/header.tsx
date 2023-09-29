@@ -6,11 +6,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { SwipeableDrawer } from '@mui/material';
 
 import styles from './header.module.css'
+import { usePathname } from 'next/navigation';
+import { currentActiveTab } from '@/helpers/currentPlace';
 
 export default function Header() {
 
-    const [currentHash, setCurrentHash] = useState<string>('/');
+    const [currentHash, setCurrentHash] = useState<string>(`/${window.location.hash}`);
     const [showFixedHidden, setShowFixedHidden] = useState<boolean>(false)
+    const currentPage = usePathname()
 
     const [state, setState] = useState({
         right: false,
@@ -34,7 +37,7 @@ export default function Header() {
                 key={item.text}
                 onClick={() => setCurrentHash(item.hash)}
                 href={item.hash}
-                className={`${styles.navText} ${currentHash === item.hash ? styles.activeTab : undefined}`}
+                className={`${styles.navText} ${currentActiveTab(currentPage, currentHash) === item.hash ? styles.activeTab : undefined}`}
             >
                 {item.text}
             </Link>
