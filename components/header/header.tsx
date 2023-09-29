@@ -6,18 +6,23 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { SwipeableDrawer } from '@mui/material';
 
 import styles from './header.module.css'
-import { usePathname } from 'next/navigation';
-import { currentActiveTab } from '@/helpers/currentPlace';
+import { useHashs } from '@/store/store';
 
 export default function Header() {
 
-    const [currentHash, setCurrentHash] = useState<string>(`/${window.location.hash}`);
+    const [currentHash, setCurrentHash] = useState<string>(`${window.location.pathname !== '/'}` ? `${window.location.pathname}` : `/${window.location.hash}`);
+
     const [showFixedHidden, setShowFixedHidden] = useState<boolean>(false)
-    const currentPage = usePathname()
+    const activeLink = useHashs(state => state.activeLink)
+    const setActiveLink = useHashs(state => state.addLinkHash)
 
     const [state, setState] = useState({
         right: false,
     });
+    
+    useEffect(() => {
+        setCurrentHash(activeLink)
+    }, [activeLink])
 
     const navItems = [
         { hash: '/', text: 'HOME' },
@@ -35,12 +40,13 @@ export default function Header() {
         return navItems.map(item => (
             <Link
                 key={item.text}
-                onClick={() => setCurrentHash(item.hash)}
+                onClick={() => setActiveLink(item.hash)}
                 href={item.hash}
-                className={`${styles.navText} ${currentActiveTab(currentPage, currentHash) === item.hash ? styles.activeTab : undefined}`}
+                className={`${styles.navText} ${currentHash === item.hash ? styles.activeTab : undefined}`
+                }
             >
                 {item.text}
-            </Link>
+            </Link >
         ));
     };
 

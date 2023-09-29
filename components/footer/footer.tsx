@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -6,8 +7,11 @@ import instagram from '../../assets/instagram.svg'
 import twitter from '../../assets/twitter.svg'
 import linkedin from '../../assets/linkedin.svg'
 import styles from './footer.module.css'
+import { useHashs } from '@/store/store'
 
 export function Footer() {
+
+    const setActiveLink = useHashs(state => state.addLinkHash)
 
     return (
         <footer className={`${styles.footer} container`}>
@@ -44,12 +48,20 @@ export function Footer() {
                 <div className={styles.navigationDiv}>
                     <div className={styles.navigateLines}>
                         <Link className={styles.link} href='/'>Home</Link>
-                        <Link className={styles.link} href='/#projects'>Projects</Link>
-                        <Link className={styles.link} href='/#whatwedo'>What we do</Link>
-                        <Link className={styles.link} href='#partners'>Partners</Link>
+                        <Link className={styles.link} onClick={() => {
+                            setActiveLink('/#projects')
+                        }} href='/#projects'>Projects</Link>
+                        <Link className={styles.link} onClick={() => {
+                            setActiveLink('/#whatwedo')
+                        }} href='/#whatwedo'>What we do</Link>
+                        <Link className={styles.link} onClick={() => {
+                            setActiveLink('/#partners')
+                        }} href='#partners'>Partners</Link>
                     </div>
                     <div className={styles.navigateLines}>
-                        <Link className={styles.link} href='/#contact'>Contact</Link>
+                        <Link className={styles.link} onClick={() => {
+                            setActiveLink('/#contact')
+                        }} href='/#contact'>Contact</Link>
                     </div>
                 </div>
             </div>

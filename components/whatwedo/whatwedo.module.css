@@ -62,7 +62,7 @@
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    border: 2px solid;
+    border: 2px solid lightgray;
     position: absolute;
     right: -12px;
     bottom: -3%;
@@ -75,7 +75,7 @@
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    border: 2px solid;
+    border: 2px solid lightgray;
     position: absolute;
     bottom: 0%;
     left: -12px;
@@ -83,12 +83,48 @@
     z-index: 100;
 }
 
+.step:nth-child(2):hover .circle::before {
+    content: "";
+    border: 2px solid deepskyblue;
+}
+
+.step:nth-child(2):hover .circle::after {
+    content: "";
+    border: 2px solid deepskyblue;
+}
+
+
+.step:last-child:hover .circle::before {
+    content: "";
+    border: 2px solid deepskyblue;
+}
+
+.step:last-child .circle::after {
+    content: "";
+    border: 2px solid deepskyblue;
+}
+
+.step:first-child .circle::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    left: -3%;
+    top: -8%;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid deepskyblue;
+}
+
+
+
 .step:last-child .circle::before {
     content: "";
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    border: 2px solid;
+    border: 2px solid lightgray;
     position: absolute;
     bottom: 0%;
     left: -12px;
@@ -190,7 +226,6 @@
     border: 4px dashed deepskyblue;
 }
 
-
 @media screen and (max-width: 1170px) {
     .logoWrapper {
         left: 24%;
@@ -204,7 +239,7 @@
         left: 18%;
     }
 
-    .textContentWrapper{
+    .textContentWrapper {
         display: flex;
         flex-direction: column;
     }
