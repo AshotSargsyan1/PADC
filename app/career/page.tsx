@@ -9,13 +9,13 @@ import { HeaderContentFrom } from "@/models/enums/headercontent";
 
 export const metadata: Metadata = generateMetadataPerPage('Career - PADC LLC')
 
-export function getVacancies(): Promise<ICareers> {
+export function getVacancies() {
     return fetch('https://api.padcllc.com/vacancies', { next: { revalidate: 150 } }).then(res => res.json())
 }
 
 export default async function Career() {
 
-    const vacancies: ICareers = await getVacancies()
+    const vacancies = await getVacancies()
 
     return (
         <>

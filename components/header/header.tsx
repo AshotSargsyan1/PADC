@@ -19,7 +19,7 @@ export default function Header() {
     const [state, setState] = useState({
         right: false,
     });
-    
+
     useEffect(() => {
         setCurrentHash(activeLink)
     }, [activeLink])
