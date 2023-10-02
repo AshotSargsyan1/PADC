@@ -81,7 +81,6 @@ export function WhatWeDo() {
                             <Image src={deploymant} width={65} height={65} alt="what we do logo" />
                         </div>
                     </div>
-
                 </div>
                 <div
                     className={styles.step}

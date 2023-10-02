@@ -1,21 +1,17 @@
 import Image from 'next/image'
+
 import { Carousel2 } from '../carousel/carousel'
 import { IProjects } from '@/models/interfaces/ourprojects'
-
+import { getProjects } from '@/app/actions/projects'
 import styles from './ourprojects.module.css'
-
-export function getProjects(): Promise<IProjects> {
-    return fetch('https://api.padcllc.com/projects', { next: { revalidate: 150 } })
-        .then(res => res.json())
-}
 
 export default async function OurProjects() {
 
-    const projects = await getProjects()
+    const projects: IProjects = await getProjects()
 
     return (
         <>
-            <div className={`${styles.contentWrapper}`}>
+            <div className={`${styles.contentWrapper}`} id="projects">
                 <div>
                     <h2 className={styles.title}>OUR PROJECTS</h2>
                     <hr className={styles.hr} />

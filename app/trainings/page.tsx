@@ -8,16 +8,14 @@ import { generateMetadataPerPage } from "@/helpers/metadata";
 import styles from './page.module.css'
 import { ITraining, ITrainingData } from "@/models/interfaces/trainings";
 import { HeaderContentFrom } from "@/models/enums/headercontent";
+import { getTrainings } from "../actions/trainings";
 
 export const metadata: Metadata = generateMetadataPerPage('Trainings - PADC LLC')
 
-export function getProjects(): Promise<ITraining> {
-    return fetch('https://api.padcllc.com/trainings', { next: { revalidate: 150 } }).then(res => res.json())
-}
 
 export default async function Trainings() {
 
-    const trainings = await getProjects()
+    const trainings: ITraining = await getTrainings()
 
     return (
         <>

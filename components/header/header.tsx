@@ -10,8 +10,8 @@ import { useHashs } from '@/store/store';
 
 export default function Header() {
 
-    const [currentHash, setCurrentHash] = useState<string>(`${window.location.pathname !== '/'}` ? `${window.location.pathname}` : `/${window.location.hash}`);
-
+    const [currentHash, setCurrentHash] = useState<string>()
+    // `${window.location.pathname !== '/'}` ? `${window.location.pathname}` : `/${window.location.hash}`
     const [showFixedHidden, setShowFixedHidden] = useState<boolean>(false)
     const activeLink = useHashs(state => state.activeLink)
     const setActiveLink = useHashs(state => state.addLinkHash)
@@ -101,7 +101,7 @@ export default function Header() {
                                         onClose={toggleDrawer(anchor, false)}
                                         onOpen={toggleDrawer(anchor, true)}
                                     >
-                                        <div>
+                                        <div className={styles.menuLinksWrapper}>
                                             {allLinks()}
                                         </div>
                                     </SwipeableDrawer>

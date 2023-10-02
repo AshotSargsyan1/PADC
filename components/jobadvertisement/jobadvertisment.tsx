@@ -7,7 +7,7 @@ import Avatar from '../../assets/employeeLogo.png'
 import styles from './jobadvertisment.module.css'
 import { ISingleCareer } from '@/models/interfaces/career'
 
-export default function JobAdvertisment(data: any) {
+export default function JobAdvertisment(data: ISingleCareer) {
     const [showDescription, setShowDescription] = useState<boolean>(false)
 
     return (

@@ -9,6 +9,7 @@ import { Contact } from "@/components/contact/contact"
 import { ISingleTraining, ISingleTrainingProps } from "@/models/interfaces/trainings"
 import styles from './page.module.css'
 import { HeaderContentFrom } from "@/models/enums/headercontent"
+import { getSingleTraining } from "@/app/actions/trainings"
 
 export async function generateMetadata({ params: { id } }: ISingleTrainingProps): Promise<Metadata> {
     const singleTrainingData: ISingleTraining = await getSingleTraining(id)
@@ -19,12 +20,7 @@ export async function generateMetadata({ params: { id } }: ISingleTrainingProps)
     }
 }
 
-export function getSingleTraining(id: string): Promise<ISingleTraining> {
-    return fetch(`https://api.padcllc.com/trainings/${id}`, { cache: 'no-store' })
-        .then(res => res.json())
-}
-
-const SingleTraining: FC<ISingleTrainingProps> = async ({ params: { id } }) => {
+export default async function SingleTraining({ params: { id } }: ISingleTrainingProps) {
 
     const singleTraining = await getSingleTraining(id)
 
@@ -49,7 +45,7 @@ const SingleTraining: FC<ISingleTrainingProps> = async ({ params: { id } }) => {
                             <h2 className={styles.dateAndLocation}>Date: <span className={styles.dateAndLocationData}>{singleTraining.data.date}</span></h2>
                             <h2 className={styles.dateAndLocation}>Location: <span className={styles.dateAndLocationData}>Mher Mkrtchyan 47/1 3101 Gyumri, Armenia</span></h2>
                         </div>
-                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}${singleTraining.data.mediaFiles.path}`} height={315} width={545} alt={`${singleTraining.data.name} image`} className={styles.image}/>
+                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}${singleTraining.data.mediaFiles.path}`} height={315} width={545} alt={`${singleTraining.data.name} image`} className={styles.image} />
                     </div>
 
                 </div>
@@ -59,5 +55,3 @@ const SingleTraining: FC<ISingleTrainingProps> = async ({ params: { id } }) => {
         </>
     )
 }
-
-export default SingleTraining;

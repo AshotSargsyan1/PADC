@@ -78,3 +78,7 @@
     color: white;
     box-shadow: 0px 4px 14px 1px rgba(26, 43, 57, 0.28);
 }
+
+.menuLinksWrapper {
+    margin-top: 100px
+}
