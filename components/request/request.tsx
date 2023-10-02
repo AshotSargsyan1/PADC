@@ -20,22 +20,18 @@ export function Request() {
         }
     });
 
-    const formData = new FormData()
     const { errors } = formState
     watch('file')
 
     const sendRequest = async (): Promise<void> => {
         setIsSending(true);
 
-        for (const key in getValues()) {
-            key === 'file'
-                ? formData.append('file', getValues()[key][0])
-                : formData.append(key, getValues()[key as keyof IFormForJoin]);
-        }
-
         await fetch('https://api.padcllc.com/contact-requests', {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(getValues())
         })
             .then(resp => {
                 alert("Your request has been sent successfully")
