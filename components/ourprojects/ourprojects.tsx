@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Carousel2 } from '../carousel/carousel'
 import { IProjects } from '@/models/interfaces/ourprojects'
-import { getProjects } from '@/app/actions/projects'
+import { getProjects } from '@/actions/projects'
 import styles from './ourprojects.module.css'
 
 export default async function OurProjects() {

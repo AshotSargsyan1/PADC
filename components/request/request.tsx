@@ -20,7 +20,7 @@ export function Request() {
         }
     });
 
-    const formData: FormData = new FormData()
+    const formData = new FormData()
     const { errors } = formState
     watch('file')
 

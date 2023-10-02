@@ -8,7 +8,7 @@ import { generateMetadataPerPage } from "@/helpers/metadata";
 import styles from './page.module.css'
 import { ITraining, ITrainingData } from "@/models/interfaces/trainings";
 import { HeaderContentFrom } from "@/models/enums/headercontent";
-import { getTrainings } from "../actions/trainings";
+import { getTrainings } from "../../actions/trainings";
 
 export const metadata: Metadata = generateMetadataPerPage('Trainings - PADC LLC')
 

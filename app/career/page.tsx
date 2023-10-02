@@ -6,7 +6,7 @@ import JobAdvertisment from "@/components/jobadvertisement/jobadvertisment";
 import { Request } from "@/components/request/request";
 import { ICareers, ISingleCareer } from "@/models/interfaces/career";
 import { HeaderContentFrom } from "@/models/enums/headercontent";
-import { getVacancies } from "../actions/vacancies";
+import { getVacancies } from "../../actions/vacancies";
 
 export const metadata: Metadata = generateMetadataPerPage('Career - PADC LLC')
 

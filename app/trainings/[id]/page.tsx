@@ -9,7 +9,7 @@ import { Contact } from "@/components/contact/contact"
 import { ISingleTraining, ISingleTrainingProps } from "@/models/interfaces/trainings"
 import styles from './page.module.css'
 import { HeaderContentFrom } from "@/models/enums/headercontent"
-import { getSingleTraining } from "@/app/actions/trainings"
+import { getSingleTraining } from "@/actions/trainings"
 
 export async function generateMetadata({ params: { id } }: ISingleTrainingProps): Promise<Metadata> {
     const singleTrainingData: ISingleTraining = await getSingleTraining(id)
