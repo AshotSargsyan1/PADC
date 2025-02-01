@@ -1,0 +1,105 @@
+.contentWrapper {
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px);
+    padding: 32px 35px;
+    margin-bottom: 40px;
+}
+
+.previousData {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 135px;
+    height: 135px;
+    display: flex;
+    justify-content: center
+}
+
+.titleAndContentWrapper {
+    width: 700px;
+}
+
+.title {
+    color: #223150;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -.4px
+}
+
+.content {
+    text-align: justify;
+}
+
+.joinUs {
+    text-decoration: none;
+    border: 2px solid #00c1de;
+    padding: 8px 35px;
+    background-color: white;
+    color: #00c1de;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+
+.joinUs:hover {
+    background-color: #4096FF;
+    color: white;
+}
+
+.showMoreDiv {
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.showMore {
+    font-weight: 600;
+}
+
+.showMoreDiv:hover .showMore {
+    text-decoration: underline;
+}
+
+.vacancieDescription>ul {
+    list-style-type: none;
+}
+
+.vacancieDescription>ul>li {
+    margin: 7px 0;
+}
+
+.vacancieDescription>p {
+    margin: 20px 0;
+}
+
+.vacancieDescription>p>strong {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1170px) {
+    .previousData {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .title {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .titleAndContentWrapper {
+        width: 450px;
+    }
+}

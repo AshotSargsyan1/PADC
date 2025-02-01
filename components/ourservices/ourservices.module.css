@@ -4,16 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 220px;
-}
-
-.title {
-    color: #002B43;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
 }
 
 .hr {
@@ -29,28 +20,8 @@
     width: 100%
 }
 
-.titleForServices {
-    font-size: 50px;
-    line-height: 59px;
-    color: white;
-}
-
-.subTitlesForServices {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    color: white;
-}
-
 .serviceMainContent:last-child>div {
     margin-bottom: 20px;
-}
-
-.servicesNames {
-    font-weight: 400;
-    font-size: 16px Line;
-    height: 19.5px;
-    padding: 0;
 }
 
 .ourServicesWrapper {
@@ -95,24 +66,25 @@
 
 .servicesMainTitle {
     color: #FFF;
-    font-size: 50px;
+    font-size: 28px;
+    font-weight: 500;
     font-style: normal;
-    font-weight: 600;
     line-height: normal;
 }
 
 .divForServices {
-    padding: 5px 20px;
-    margin-bottom: 20px;
-    margin-right: 18px;
-    border-radius: 15px;
-    background: #C9F1F6;
     color: #000;
-    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     cursor: pointer;
+    background-color: #c9f1f6;
+    border-radius: 12px;
+    width: 42%;
+    text-align: center;
+    padding: 8px;
+    margin: 9px 10px 9px 0;
+    transition: all .3s linear !important;
 }
 
 .divForServices:hover {
@@ -136,7 +108,7 @@
 
 .thirdService {
     padding: 21px 0 0 16px;
-    min-height: 580px;
+    min-height: 575px;
     width: 100%;
     background-color: #00B4CE;
     margin-bottom: 20px;
@@ -156,4 +128,51 @@
     width: 100%;
     background-color: #01396C;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1170px) {
+    .imgDiv {
+        display: none;
+    }
+
+    .homeHeaderContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .contentDiv {
+        width: 90%;
+        text-align: center;
+    }
+
+    .divForServices {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .ourServicesWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .servicesSubDiv {
+        width: 100%;
+    }
+
+    .secondService,
+    .thirdService,
+    .fourthService,
+    .fifthService {
+        min-height: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

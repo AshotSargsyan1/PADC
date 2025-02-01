@@ -1,22 +1,16 @@
 .sliderWrapper {
-    position: relative
+    position: relative;
+    margin-bottom: 40px;
 }
 
 .sliderWrapper2 {
-    position: relative
+    width: 700px;
+    position: relative;
+    z-index: 200;
 }
 
-.mainDiv {
-    height: 510px;
-}
-
-.slideItem {
-    display: flex;
-}
-
-.slideContent {
-    height: 510px;
-    width: 55%;
+.slider {
+    width: 90%;
 }
 
 .slideContent2 {
@@ -25,36 +19,23 @@
 
 .slideImgDiv {
     height: 510px;
-    width: 45%;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.subTitle {
-    color: rgba(0, 0, 0, 0.51);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-top: 57px;
-    margin-bottom: 35px;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .title {
-    color: #000;
-    font-size: 60px;
+    color: #223150;
+    font-size: 52px;
     max-width: 760px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     margin-bottom: 25px;
 }
 
 .content {
-    color: #000;
-    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
@@ -70,90 +51,27 @@
 }
 
 .contentDiv {
-    width: 660px;
     height: 195px;
     margin-bottom: 16px;
 }
 
-.btnsForSlide {
-    position: absolute;
-    z-index: 2;
-    bottom: -20px;
-    display: flex;
-    align-items: center
-}
-
-.btnsForSlide2 {
-    position: absolute;
-    z-index: 2;
-    bottom: 0px;
-    display: flex;
-    align-items: center
-}
-
-.elipse {
-    margin: 25px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 196, 224, 1);
-}
-
-.indicatorBtn {
-    cursor: pointer
-}
-
 .title2 {
-    color: #00C4E0;
-    font-size: 38px;
+    font-size: 28px;
+    color: #00c2df;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
-    margin-bottom: 25px;
-}
-
-.hr {
-    width: 77px;
-    height: 4px;
-    border: 0;
-    background: #00C4E0;
-    margin-bottom: 40px;
-}
-
-.secondTitle {
-    color: #00C4E0;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 25px;
-}
-
-.viewMoreBtn {
-    border: 3px solid #00C4E0;
-    background-color: white;
-    width: 195px;
-    height: 45px;
-    color: #00C4E0;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 33px;
-    margin-bottom: 130px;
+    margin-bottom: 20px;
 }
 
 .ourTeamInfo {
     width: 100%;
 }
 
-.cardWrapper:hover * .darkDivOnCard{
-    opacity: 0;
-}
-
 .cardInfo {
     position: relative;
-    width: 425px;
-    height: 425px;
+    width: 356px;
+    height: 400px;
     overflow: hidden;
     text-align: center;
     cursor: pointer;
@@ -191,8 +109,7 @@
     letter-spacing: -.2px;
 }
 
-
-.profession{
+.profession {
     position: absolute;
     left: 10px;
     bottom: -100%;
@@ -205,19 +122,66 @@
     font-weight: 600;
 }
 
-.professionP{
-    color: black;
-    font-size: 14px;
+.professionP {
+    line-height: normal;
+    font-weight: 600;
     letter-spacing: 2px;
-    
 }
 
-.darkDivOnCard, .profession{
-    transition: all 0.4s;
+.darkDivOnCard,
+.profession,
+.cardImg {
+    transition: all .5s ease;
 }
 
-
-.cardWrapper:hover * .profession{
-    bottom: 60px;
+.cardWrapper:hover * .profession {
+    bottom: 50px;
 }
 
+.cardWrapper:hover * .darkDivOnCard {
+    opacity: 0;
+}
+
+.cardWrapper:hover * .cardImg {
+    transform: translate3d(0, 0, 0);
+}
+
+.hr {
+    height: 5px;
+    width: 85px;
+    margin: 20px 0;
+    background: #00c2df;
+    opacity: .3;
+    transition: width .5s ease;
+    border: none;
+}
+
+.technologiesDiv {
+    margin-bottom: 150px;
+}
+
+@media screen and (max-width: 1170px) {
+    .sliderWrapper2 {
+        width: 800px;
+    }
+
+    .slideContent2 {
+        width: 100%;
+    }
+
+    .cardInfo {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .sliderWrapper2 {
+        width: 600px;
+    }
+
+    .cardInfo {
+        width: 400px;
+        height: 350px;
+    }
+}

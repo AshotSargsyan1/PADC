@@ -1,17 +1,12 @@
 .contentWrapper {
+    padding-top: 120px;
+    position: relative;
     display: flex;
-    margin-bottom: 466px;
 }
 
 .title {
-    color: #002B43;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
     margin-bottom: 16px;
 }
-
 
 .hr {
     width: 77px;
@@ -26,28 +21,74 @@
     width: 225px
 }
 
-/* 
 .triangles {
     position: absolute;
-    right: 0;
-    width: 2000px;
-    height: 600px;
+    right: -200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    z-index: 0;
+    z-index: 2;
 }
 
-.triangle1 {
-    transition: all .3s linear !important;
-    transform: translate(-13.4625px, -6.7375px);
+.triangleMainWrapper {
+    display: flex;
+    height: 370px;
 }
 
-.triangle2 {
-    transition: all .3s linear !important;
+.triangleWrapper1 {
+    position: relative;
+    right: -350px;
+    z-index: 3;
+    animation-name: triangle1Animation;
+    transition: all .6s linear !important;
 }
 
-.triangle3 {
-    margin-top: 82px;
-    margin-bottom: 60px;
-} */
+.triangleWrapper2 {
+    align-self: flex-end;
+    position: relative;
+    right: -200px;
+    transition: all .6s linear !important;
+}
+
+.triangleWrapper3 {
+    animation-name: triangle3Animation;
+    transition: all .6s linear !important;
+}
+
+.triangleMainWrapper:hover .triangleWrapper2 {
+    animation: triangle2Animation 2s linear infinite alternate !important;
+}
+
+.triangleMainWrapper:hover .triangleWrapper1 {
+    animation: triangle1Animation 2s linear infinite alternate !important;
+}
+
+@keyframes triangle1Animation {
+    from {
+        top: 0px;
+        right: -350px;
+    }
+
+    to {
+        top: -10px;
+        right: -340px;
+    }
+}
+
+@keyframes triangle2Animation {
+    from {
+        bottom: 0px;
+        right: -200px;
+    }
+
+    to {
+        bottom: -20px;
+        right: -210px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .triangles {
+        display: none;
+    }
+}

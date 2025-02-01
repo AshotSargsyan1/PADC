@@ -1,5 +1,5 @@
 .contentWrapper {
-    margin-bottom: 185px;
+    margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -7,27 +7,18 @@
 .titleDiv {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    margin-bottom: 115px;
+    align-items: flex-end;
+    margin-bottom: 60px;
     width: 900px;
-}
-
-.title {
-    color: #002B43;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 10px;
 }
 
 .subTitle {
     color: #A3A3A3;
     text-align: right;
-    font-size: 25px;
+    font-size: 20px;
+    color: #A3A3A3;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    margin-top: 30px;
     margin-bottom: 35px;
 }
 
@@ -40,43 +31,25 @@
 }
 
 .hr:hover {
-    width: 400px
+    width: 332px
 }
 
 .contentDiv {
     padding-left: 50px;
-    width: 1080px;
+    width: 900px;
     flex-shrink: 0;
     text-align: right;
-    margin-bottom: 70px;
 }
 
 .content {
-    color: #000;
     text-align: right;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 37px;
     margin-bottom: 70px;
 }
 
 .titleAndContentWrapper {
     display: flex;
     flex-direction: column;
-    align-items: end;
-}
-
-.viewMore {
-    width: 315px;
-    height: 75px;
-    background: #002B43;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 45px;
-    color: #FFF;
-    cursor: pointer;
+    align-items: flex-end;
 }
 
 .partnersDiv {
@@ -104,8 +77,8 @@
 }
 
 .elipse {
-    width: 155px;
-    height: 155px;
+    width: 135px;
+    height: 135px;
     border: 15px solid rgba(0, 0, 0, 0.09);
     border-radius: 50%;
     position: relative;
@@ -123,16 +96,50 @@
 
 .statisticsNumbersTitle {
     color: #002B43;
-    font-size: 64px;
+    font-size: 40px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
 }
 
 .statisticsSubTitle {
-    color: rgba(0, 43, 67, 0.63);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1170px) {
+
+    .titleDiv,
+    .contentDiv {
+        width: 700px
+    }
+
+    .partnersDiv>* {
+        width: 80px;
+        height: 40px;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+
+    .titleDiv,
+    .contentDiv {
+        width: 560px
+    }
+
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .statistics {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+
+    .partnersDiv>* {
+        width: 60px;
+        height: 30px;
+    }
 }

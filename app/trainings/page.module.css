@@ -1,0 +1,112 @@
+.announcementsWrapper {
+    margin-bottom: 115px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.announcement {
+    height: 205px;
+    width: 350px;
+    margin-bottom: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.coverDiv {
+    height: 200px;
+    width: 350px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #000000;
+    position: absolute;
+    transition: all 0.35s ease;
+    z-index: 100;
+}
+
+.coverDivContent {
+    height: 200px;
+    width: 350px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.35s ease;
+    z-index: 200;
+}
+
+.announcement:hover .coverDiv {
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+}
+
+.announcement:hover .coverDivContent {
+    opacity: 1;
+    top: 0;
+    left: 0;
+}
+
+.imageFigcaption {
+    margin: 0;
+    padding: 0;
+}
+
+.spanLine {
+    position: absolute;
+    transition: 2s;
+}
+
+.spanLine:nth-child(1) {
+    width: 100px;
+    background-color: white;
+}
+
+.spanLinesWrapper {
+    border: 1px solid white;
+    height: 200px;
+    width: 300px;
+}
+
+.joinBtn {
+    width: 150px;
+    margin-top: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: normal;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    letter-spacing: 2px;
+    padding: 7px 35px;
+    color: white;
+    transition: all .35s linear;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.joinBtn:hover {
+    background-color: #00A8C9;
+    border: 1px solid #00A8C9;
+}
+
+.trainingName {
+    color: #fff;
+    margin-bottom: 10px
+}
+
+.trainingName:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 880px) {
+    .announcementsWrapper{
+        justify-content: center;
+    }
+}
+

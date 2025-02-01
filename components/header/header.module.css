@@ -4,12 +4,20 @@
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 10px;
+    transition: all 0.9s ease;
+    position: relative;
+    top: -100%;
 }
 
-.subHeader {
-    margin-top: 55px;
-    margin-bottom: 120px;
+.header.scrolledHeader {
+    position: fixed;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.91);
+    margin-bottom: 0;
+    top: 0;
 }
 
 .navigate {
@@ -17,15 +25,8 @@
     align-items: center;
 }
 
-.nav {
-    margin-left: 52px;
-}
-
-.nav:hover>* {
-    padding: 7px;
-    color: white;
-    background-color: rgba(0, 168, 201, 0.88);
-    cursor: pointer;
+.navigate nav:first-child {
+    margin-left: 0;
 }
 
 .logoAndNavigateWrapper {
@@ -35,6 +36,49 @@
 }
 
 .navText {
+    font-weight: 600;
+    font-size: 14px;
     text-decoration: none;
-    color: #001012;
+    color: #5e6576;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.navText:hover {
+    background-color: rgba(0, 168, 201, 0.88);
+    box-shadow: 0px 4px 14px 1px rgba(26, 43, 57, 0.28);
+    color: white;
+}
+
+.active {
+    background-color: rgba(0, 168, 201, 0.88);
+    color: white;
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    .navigate {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.activeTab {
+    background-color: rgba(0, 168, 201, 0.88);
+    color: white;
+    box-shadow: 0px 4px 14px 1px rgba(26, 43, 57, 0.28);
+}
+
+.menuLinksWrapper {
+    margin-top: 100px
 }

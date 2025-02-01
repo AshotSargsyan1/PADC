@@ -1,11 +1,8 @@
-import Image from 'next/image'
-
-import googleFakeMap from '../../assets/map.png'
 import styles from './contact.module.css'
 
 export function Contact() {
     return (
-        <div className={`${styles.contentWrapper} container`}>
+        <div className={`${styles.contentWrapper} container`} id='contact'>
             <div>
                 <h2 className={styles.title}>CONTACT US</h2>
                 <hr className={styles.hr} />
@@ -20,15 +17,9 @@ export function Contact() {
                         </div>
                         <div className={styles.contactInfoDiv}>
                             <p className={styles.contactInfo}>Mher Mkrtchyan 47/1 3101 Gyumri, Armenia</p>
-                            <a className={styles.contactInfo} href="tel:+(374)94 019 941">+(374)94 019 941</a>
+                            <a className={styles.contactInfo} href="tel:+(374)94 019 941">+(374)94-019-941 / +(374)94-446-468</a>
                             <a className={styles.contactInfo} href="mailto:contact@padcllc.com">contact@padcllc.com</a>
                         </div>
-                    </div>
-                    <div className={styles.enterNumberDiv}>
-                        <h6 className={styles.titleForNumber}>Write your number</h6>
-                        <p className={styles.subTextForNumber}>We will call you</p>
-                        <input type="text" className={styles.inputForNumber} />
-                        <button className={styles.buttonForSendNumber}>Send</button>
                     </div>
                 </div>
                 <div className={styles.contactAndMapSubWrapper}>
